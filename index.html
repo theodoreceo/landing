@@ -11,7 +11,7 @@
     html{scroll-behavior:smooth;scroll-snap-type:y mandatory;background:var(--navy)}
     body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#fff;background:var(--navy);-webkit-font-smoothing:antialiased;overflow-x:hidden}
     a{text-decoration:none;color:inherit}button{font:inherit}h1,h2,h3,p{margin-top:0}
-    .screen{height:100svh;min-height:100svh;scroll-snap-align:start;scroll-snap-stop:always;position:relative;overflow:hidden;display:flex;align-items:center}
+    .screen{height:100vh;height:100dvh;min-height:100vh;min-height:100dvh;scroll-snap-align:start;scroll-snap-stop:always;position:relative;overflow:hidden;display:flex;align-items:center}
     .shell{width:min(1180px,calc(100% - 44px));margin:auto;position:relative;z-index:2}
     .dark{background:radial-gradient(circle at 16% 18%,rgba(83,158,255,.33),transparent 27%),radial-gradient(circle at 83% 20%,rgba(47,119,255,.27),transparent 31%),linear-gradient(145deg,#061328 0%,#0a244d 52%,#071a37 100%)}
     .light{background:radial-gradient(circle at 82% 18%,rgba(93,158,255,.16),transparent 29%),linear-gradient(180deg,#eef7ff,#fbfdff);color:var(--ink)}
@@ -21,36 +21,50 @@
 
     .nav{position:absolute;top:max(18px,env(safe-area-inset-top));left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;width:min(1180px,calc(100% - 44px));margin:auto}.brand{font-size:24px;font-weight:900;letter-spacing:-.05em}.nav a{padding:11px 16px;border-radius:16px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.15);font-size:13px;font-weight:800;backdrop-filter:blur(16px)}
     .heroGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center}.kicker{font-size:13px;color:#a6d2ff;font-weight:800;margin-bottom:16px}h1{font-size:clamp(54px,6.3vw,86px);line-height:.95;letter-spacing:-.068em;margin-bottom:24px;max-width:850px}h1 span{background:linear-gradient(90deg,#81beff,#ddf1ff);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:19px;line-height:1.58;color:rgba(233,243,255,.72);max-width:690px;margin-bottom:28px}.proofs{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}.proof{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.13);font-size:12px;font-weight:780;color:rgba(255,255,255,.86)}
-    .portrait{width:min(410px,100%);margin:auto;padding:16px;border-radius:32px;transform:rotate(1.2deg)}.photo{height:min(46svh,430px);border-radius:25px;background:linear-gradient(145deg,#c5e1ff 0%,#70a4dd 47%,#284d7e 100%);position:relative;overflow:hidden}.photo:before{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.25);top:12%;left:50%;transform:translateX(-50%)}.photo:after{content:"";position:absolute;width:250px;height:285px;border-radius:140px 140px 28px 28px;background:rgba(5,23,52,.77);bottom:-88px;left:50%;transform:translateX(-50%)}.portraitFoot{display:flex;justify-content:space-between;align-items:end;padding:16px 5px 2px}.portraitFoot strong{font-size:23px}.portraitFoot span{font-size:12px;color:rgba(255,255,255,.58)}
-    .swipeHint{position:absolute;z-index:4;left:50%;bottom:max(18px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;align-items:center;gap:9px;color:rgba(238,247,255,.56);font-size:12px;white-space:nowrap}.swipeHint i{font-style:normal;font-size:20px;animation:hint 1.6s ease-in-out infinite}@keyframes hint{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(7px);opacity:1}}
+    .portrait{width:min(410px,100%);margin:auto;padding:16px;border-radius:32px;transform:rotate(1.2deg)}.photo{height:min(46dvh,430px);border-radius:25px;background:linear-gradient(145deg,#c5e1ff 0%,#70a4dd 47%,#284d7e 100%);position:relative;overflow:hidden}.photo:before{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.25);top:12%;left:50%;transform:translateX(-50%)}.photo:after{content:"";position:absolute;width:250px;height:285px;border-radius:140px 140px 28px 28px;background:rgba(5,23,52,.77);bottom:-88px;left:50%;transform:translateX(-50%)}.portraitFoot{display:flex;justify-content:space-between;align-items:end;padding:16px 5px 2px}.portraitFoot strong{font-size:23px}.portraitFoot span{font-size:12px;color:rgba(255,255,255,.58)}
+    .swipeHint{position:absolute;z-index:4;left:50%;bottom:max(16px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;align-items:center;gap:8px;color:rgba(238,247,255,.52);font-size:11px;white-space:nowrap}.swipeHint i,.nextHint{font-style:normal;animation:hint 1.6s ease-in-out infinite}@keyframes hint{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(6px);opacity:1}}
+    .nextHint{position:absolute;left:50%;bottom:max(13px,env(safe-area-inset-bottom));transform:translateX(-50%);font-size:20px;color:rgba(95,126,161,.42)}.dark .nextHint{color:rgba(231,243,255,.35)}
 
-    .aboutGrid{display:grid;grid-template-columns:.72fr 1.28fr;gap:54px;align-items:center}.aboutVisual{padding:14px;border-radius:30px;background:linear-gradient(150deg,#08204a,#0d3b78);box-shadow:0 25px 80px rgba(24,74,135,.18)}.aboutVisual .photo{height:min(55svh,500px)}.aboutCopy h2,.screenTitle{font-size:clamp(40px,4.8vw,66px);line-height:1;letter-spacing:-.055em;margin-bottom:22px}.aboutLead{font-size:21px;line-height:1.55;color:#263b59;margin-bottom:20px}.aboutCopy p{font-size:16px;line-height:1.7;color:#607188;max-width:700px;margin-bottom:15px}.moment{padding:19px 22px;border-radius:21px;background:rgba(78,145,255,.1);border:1px solid rgba(55,115,195,.11);font-size:17px;line-height:1.52;color:#183454;margin:20px 0}.stats{display:flex;gap:9px;flex-wrap:wrap}.stat{padding:11px 14px;border-radius:16px;background:#fff;border:1px solid rgba(38,92,160,.1);font-size:12px;color:#6a7b91}.stat strong{font-size:19px;color:var(--ink);margin-right:5px}
+    .aboutGrid{display:grid;grid-template-columns:.72fr 1.28fr;gap:54px;align-items:center}.aboutVisual{padding:14px;border-radius:30px;background:linear-gradient(150deg,#08204a,#0d3b78);box-shadow:0 25px 80px rgba(24,74,135,.18)}.aboutVisual .photo{height:min(55dvh,500px)}.aboutCopy h2,.screenTitle{font-size:clamp(40px,4.8vw,66px);line-height:1;letter-spacing:-.055em;margin-bottom:22px}.aboutLead{font-size:21px;line-height:1.55;color:#263b59;margin-bottom:20px}.aboutCopy p{font-size:16px;line-height:1.7;color:#607188;max-width:700px;margin-bottom:15px}.moment{padding:19px 22px;border-radius:21px;background:rgba(78,145,255,.1);border:1px solid rgba(55,115,195,.11);font-size:17px;line-height:1.52;color:#183454;margin:20px 0}.stats{display:flex;gap:9px;flex-wrap:wrap}.stat{padding:11px 14px;border-radius:16px;background:#fff;border:1px solid rgba(38,92,160,.1);font-size:12px;color:#6a7b91}.stat strong{font-size:19px;color:var(--ink);margin-right:5px}
 
-    .evidenceWrap{width:100%}.evidenceTop{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:26px}.evidenceTop .screenTitle{margin:0;max-width:720px}.evidenceTop p{margin:0;max-width:350px;color:rgba(231,242,255,.57);font-size:14px;line-height:1.5}.evidenceGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.carouselViewport{overflow:hidden;border-radius:30px;touch-action:pan-y}.carouselTrack{display:flex;transition:transform .4s cubic-bezier(.2,.8,.2,1)}.slide{min-width:100%;padding:1px}.caseCard,.reviewCard{height:min(55svh,470px);border-radius:29px;padding:28px;background:linear-gradient(145deg,rgba(255,255,255,.15),rgba(255,255,255,.055));border:1px solid rgba(255,255,255,.17);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 24px 70px rgba(0,17,52,.24);backdrop-filter:blur(22px)}.caseCard{background:radial-gradient(circle at 85% 12%,rgba(113,190,255,.22),transparent 28%),linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.055))}.caseName{font-size:13px;font-weight:800;color:#a8d3ff}.caseScore{display:flex;gap:18px;align-items:center;margin:11svh 0 14px}.caseScore span{font-size:clamp(58px,7vw,88px);font-weight:900;letter-spacing:-.07em}.caseScore i{font-style:normal;font-size:36px;color:#85c1ff}.caseCard h3{font-size:27px;letter-spacing:-.04em;margin-bottom:8px}.caseCard p{font-size:14px;color:rgba(230,242,255,.61);line-height:1.55}.reviewCard{display:flex;flex-direction:column}.reviewCard strong{font-size:18px;margin-bottom:14px}.reviewShot{flex:1;border-radius:22px;background:rgba(255,255,255,.07);border:1px dashed rgba(202,228,255,.25);display:grid;place-items:center;text-align:center;padding:24px;color:rgba(232,244,255,.52);font-size:14px;line-height:1.55}.controls{display:flex;gap:7px;margin-top:11px}.arrow{width:43px;height:43px;border-radius:15px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.07);color:#fff;cursor:pointer;font-size:19px}
+    .evidenceWrap{width:100%}.evidenceTop{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:26px}.evidenceTop .screenTitle{margin:0;max-width:720px}.evidenceTop p{margin:0;max-width:350px;color:rgba(231,242,255,.57);font-size:14px;line-height:1.5}.evidenceGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.evidenceTabs{display:none}.carouselViewport{overflow:hidden;border-radius:30px;touch-action:pan-y}.carouselTrack{display:flex;transition:transform .4s cubic-bezier(.2,.8,.2,1)}.slide{min-width:100%;padding:1px}.caseCard,.reviewCard{height:min(55dvh,470px);border-radius:29px;padding:28px;background:linear-gradient(145deg,rgba(255,255,255,.15),rgba(255,255,255,.055));border:1px solid rgba(255,255,255,.17);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 24px 70px rgba(0,17,52,.24);backdrop-filter:blur(22px)}.caseCard{background:radial-gradient(circle at 85% 12%,rgba(113,190,255,.22),transparent 28%),linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.055))}.caseName{font-size:13px;font-weight:800;color:#a8d3ff}.caseScore{display:flex;gap:18px;align-items:center;margin:11dvh 0 14px}.caseScore span{font-size:clamp(58px,7vw,88px);font-weight:900;letter-spacing:-.07em}.caseScore i{font-style:normal;font-size:36px;color:#85c1ff}.caseCard h3{font-size:27px;letter-spacing:-.04em;margin-bottom:8px}.caseCard p{font-size:14px;color:rgba(230,242,255,.61);line-height:1.55}.reviewCard{display:flex;flex-direction:column}.reviewCard strong{font-size:18px;margin-bottom:14px}.reviewShot{flex:1;border-radius:22px;background:rgba(255,255,255,.07);border:1px dashed rgba(202,228,255,.25);display:grid;place-items:center;text-align:center;padding:24px;color:rgba(232,244,255,.52);font-size:14px;line-height:1.55}.controls{display:flex;gap:7px;margin-top:11px}.arrow{width:43px;height:43px;border-radius:15px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.07);color:#fff;cursor:pointer;font-size:19px}
 
     .approachGrid{display:grid;grid-template-columns:.95fr 1.05fr;gap:32px;align-items:center}.approachCopy>p{font-size:18px;line-height:1.62;color:#61738b;max-width:650px}.principles{display:grid;gap:10px;margin-top:24px}.principle{padding:17px 20px;border-radius:20px;background:#fff;border:1px solid rgba(37,91,160,.1);box-shadow:0 12px 32px rgba(27,70,125,.05)}.principle strong{display:block;font-size:18px;margin-bottom:4px}.principle p{margin:0;color:#697b91;line-height:1.48;font-size:13px}.dashboard{padding:25px;border-radius:31px;background:linear-gradient(145deg,#0a2146,#0d356b);color:#fff;box-shadow:0 28px 80px rgba(22,72,135,.18)}.dashTop{font-size:21px;font-weight:850;margin-bottom:17px}.scorePanel{padding:20px;border-radius:21px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);margin-bottom:11px}.scorePanelTop{display:flex;justify-content:space-between;align-items:end}.scorePanelTop span{font-size:12px;color:rgba(230,242,255,.57)}.scorePanelTop b{font-size:38px;letter-spacing:-.06em}.progress{height:10px;border-radius:999px;background:rgba(255,255,255,.1);margin-top:14px;overflow:hidden}.progress div{width:67%;height:100%;background:linear-gradient(90deg,#6aabff,#a1d1ff)}.dashGrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.dashBox{padding:15px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}.dashBox span{display:block;font-size:10px;color:#92c4ff;margin-bottom:7px}.dashBox strong{font-size:16px}.parentLine{margin-top:20px;font-size:17px;line-height:1.48;color:#29405f}.parentLine b{color:#0e4d9d}
 
-    .trialCard{padding:44px;border-radius:38px;background:radial-gradient(circle at 82% 15%,rgba(121,195,255,.22),transparent 30%),linear-gradient(145deg,#0a2146,#0d356b);box-shadow:0 34px 100px rgba(22,72,135,.22)}.trialGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}.trialCard .screenTitle{margin-bottom:18px}.trialCard>div p,.trialCopy p{font-size:17px;line-height:1.6;color:rgba(230,243,255,.66);max-width:650px}.trialPoints{display:grid;gap:10px}.trialPoint{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);font-size:14px}.trialPoint b{color:#a9d6ff}.trialAction{margin-top:25px}.finalNote{margin-top:18px!important;font-size:12px!important;color:rgba(232,243,255,.48)!important}.miniFooter{position:absolute;left:0;right:0;bottom:max(14px,env(safe-area-inset-bottom));text-align:center;font-size:11px;color:rgba(232,243,255,.38)}
+    .trialCard{padding:44px;border-radius:38px;background:radial-gradient(circle at 82% 15%,rgba(121,195,255,.22),transparent 30%),linear-gradient(145deg,#0a2146,#0d356b);box-shadow:0 34px 100px rgba(22,72,135,.22)}.trialGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}.trialCard .screenTitle{margin-bottom:18px}.trialCopy p{font-size:17px;line-height:1.6;color:rgba(230,243,255,.66);max-width:650px}.trialPoints{display:grid;gap:10px}.trialPoint{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);font-size:14px}.trialPoint b{color:#a9d6ff}.trialAction{margin-top:25px}.finalNote{margin-top:18px!important;font-size:12px!important;color:rgba(232,243,255,.48)!important}.miniFooter{position:absolute;left:0;right:0;bottom:max(12px,env(safe-area-inset-bottom));text-align:center;font-size:10px;color:rgba(232,243,255,.34)}
 
     .pager{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:20;display:grid;gap:8px;padding:10px 8px;border-radius:999px;background:rgba(6,19,40,.28);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(14px)}.pager button{width:7px;height:7px;border:0;border-radius:999px;background:rgba(255,255,255,.28);padding:0;cursor:pointer;transition:.25s}.pager button.active{height:25px;background:#9fd0ff}.pager.lightMode{background:rgba(255,255,255,.46);border-color:rgba(38,92,160,.12)}.pager.lightMode button{background:rgba(25,73,136,.2)}.pager.lightMode button.active{background:#3276d2}
 
-    @media(max-width:900px){.heroGrid,.aboutGrid,.evidenceGrid,.approachGrid,.trialGrid{grid-template-columns:1fr}.heroVisual{display:none}.heroGrid{padding-top:60px}.aboutGrid{grid-template-columns:.8fr 1.2fr}.evidenceTop p{display:none}.caseCard,.reviewCard{height:42svh}.approachGrid{grid-template-columns:1fr 1fr}.trialGrid{grid-template-columns:1.12fr .88fr}}
+    @media(max-width:900px){.heroGrid,.aboutGrid,.evidenceGrid,.approachGrid,.trialGrid{grid-template-columns:1fr}.portrait{display:none}.evidenceTop p{display:none}}
+
     @media(max-width:650px){
-      .shell{width:min(100% - 26px,1180px)}.screen{padding:calc(56px + env(safe-area-inset-top)) 0 calc(48px + env(safe-area-inset-bottom));align-items:center}.nav{width:min(100% - 26px,1180px);top:max(12px,env(safe-area-inset-top))}.brand{font-size:21px}.nav a{display:none}.pager{right:8px;gap:6px;padding:8px 6px}.pager button{width:6px;height:6px}.pager button.active{height:20px}
-      .heroGrid{display:block;padding:0}.kicker{font-size:11px;margin-bottom:12px}h1{font-size:clamp(43px,13vw,55px);margin-bottom:18px}.lead{font-size:16px;line-height:1.52;margin-bottom:22px}.btn{min-height:50px;padding:0 18px;font-size:14px}.proofs{margin-top:17px}.proof{font-size:11px;padding:8px 10px}.swipeHint{bottom:max(13px,env(safe-area-inset-bottom));font-size:11px}
-      .aboutGrid{display:flex;flex-direction:column;gap:17px}.aboutVisual{width:100%;padding:9px;border-radius:23px}.aboutVisual .photo{height:26svh;min-height:170px;border-radius:18px}.aboutCopy h2,.screenTitle{font-size:clamp(34px,10.5vw,44px);margin-bottom:13px}.aboutLead{font-size:16px;line-height:1.47;margin-bottom:10px}.aboutCopy p{font-size:13px;line-height:1.5;margin-bottom:8px}.moment{font-size:14px;line-height:1.45;padding:13px 15px;margin:10px 0}.stats{gap:6px}.stat{padding:8px 10px;font-size:10px}.stat strong{font-size:15px}
-      .evidenceTop{margin-bottom:12px}.evidenceTop .screenTitle{font-size:36px}.evidenceGrid{display:grid;grid-template-columns:1fr;gap:10px}.caseCard,.reviewCard{height:30svh;min-height:190px;padding:17px;border-radius:22px}.carouselViewport{border-radius:22px}.caseName{font-size:11px}.caseScore{margin:4.5svh 0 7px;gap:12px}.caseScore span{font-size:47px}.caseScore i{font-size:25px}.caseCard h3{font-size:18px;margin-bottom:4px}.caseCard p{font-size:11px;line-height:1.4}.reviewCard strong{font-size:14px;margin-bottom:8px}.reviewShot{font-size:11px;padding:13px;border-radius:16px}.controls{margin-top:6px}.arrow{width:38px;height:38px;border-radius:13px;font-size:17px}
-      .approachGrid{grid-template-columns:1fr;gap:14px}.approachCopy .screenTitle{font-size:36px}.approachCopy>p{font-size:14px;line-height:1.5}.principles{margin-top:13px;gap:7px}.principle{padding:11px 13px;border-radius:15px}.principle strong{font-size:15px}.principle p{font-size:11px;line-height:1.4}.dashboard{padding:16px;border-radius:22px}.dashTop{font-size:16px;margin-bottom:9px}.scorePanel{padding:12px;border-radius:15px;margin-bottom:7px}.scorePanelTop span{font-size:10px}.scorePanelTop b{font-size:29px}.progress{height:8px;margin-top:8px}.dashGrid{gap:6px}.dashBox{padding:9px;border-radius:13px}.dashBox span{font-size:8px;margin-bottom:4px}.dashBox strong{font-size:12px}.parentLine{font-size:13px;margin-top:10px}
-      .trialCard{padding:22px 18px;border-radius:26px}.trialGrid{grid-template-columns:1fr;gap:18px}.trialCard .screenTitle{font-size:38px}.trialCopy p{font-size:14px;line-height:1.5}.trialPoints{gap:7px}.trialPoint{padding:11px 13px;border-radius:14px;font-size:12px}.trialAction{margin-top:16px}.finalNote{font-size:10px!important;margin-top:10px!important}.miniFooter{font-size:9px}
+      html{scroll-snap-type:y mandatory}.shell{width:calc(100% - 34px)}.screen{padding:max(58px,calc(44px + env(safe-area-inset-top))) 0 max(42px,calc(30px + env(safe-area-inset-bottom)));align-items:center}
+      .nav{width:calc(100% - 34px);top:max(12px,env(safe-area-inset-top))}.brand{font-size:21px}.nav a{display:none}
+      .pager{right:7px;padding:0;background:transparent;border:0;backdrop-filter:none;gap:7px}.pager button{width:5px;height:5px;background:rgba(255,255,255,.3)}.pager button.active{height:18px;width:5px}.pager.lightMode button{background:rgba(27,70,126,.22)}
+
+      .heroGrid{display:block}.kicker{font-size:11px;margin-bottom:11px}h1{font-size:clamp(36px,10.4vw,43px);line-height:.98;letter-spacing:-.055em;margin-bottom:16px}.lead{font-size:14.5px;line-height:1.48;margin-bottom:20px;max-width:96%}.btn{width:100%;min-height:48px;border-radius:16px;font-size:14px}.proofs{margin-top:14px;gap:6px}.proof{font-size:10px;padding:7px 9px}.swipeHint{bottom:max(14px,env(safe-area-inset-bottom));font-size:10px}.swipeHint i{font-size:17px}
+
+      .aboutGrid{display:block}.aboutVisual{width:82px;height:82px;padding:5px;border-radius:22px;margin-bottom:16px;box-shadow:none}.aboutVisual .photo{height:72px;border-radius:17px}.aboutVisual .photo:before{width:32px;height:32px;top:12px}.aboutVisual .photo:after{width:54px;height:58px;bottom:-20px;border-radius:30px 30px 10px 10px}.aboutCopy h2,.screenTitle{font-size:clamp(31px,8.8vw,37px);line-height:1.01;letter-spacing:-.045em;margin-bottom:13px}.aboutLead{font-size:15px;line-height:1.46;margin-bottom:11px}.aboutCopy p{font-size:12.5px;line-height:1.48;margin-bottom:9px}.moment{font-size:13px;line-height:1.42;padding:12px 14px;margin:11px 0 12px;border-radius:16px}.stats{gap:6px}.stat{padding:8px 10px;font-size:10px}.stat strong{font-size:14px}
+
+      .evidenceTop{margin-bottom:12px}.evidenceTop .screenTitle{font-size:34px}.evidenceTabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:4px;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);margin-bottom:12px}.evidenceTab{min-height:40px;border:0;border-radius:12px;background:transparent;color:rgba(235,245,255,.56);font-size:13px;font-weight:800}.evidenceTab.active{background:rgba(255,255,255,.13);color:#fff}.evidenceGrid{display:block}.carousel.mobileHidden{display:none}.caseCard,.reviewCard{height:49dvh;max-height:410px;min-height:330px;padding:20px;border-radius:24px}.carouselViewport{border-radius:24px}.caseName{font-size:11px}.caseScore{margin:9dvh 0 10px;gap:12px}.caseScore span{font-size:58px}.caseScore i{font-size:28px}.caseCard h3{font-size:20px}.caseCard p{font-size:12px;line-height:1.42}.reviewCard strong{font-size:15px}.reviewShot{font-size:12px;padding:16px;border-radius:18px}.controls{margin-top:8px}.arrow{width:40px;height:40px;border-radius:13px}
+
+      .approachGrid{display:block}.approachCopy .screenTitle{font-size:34px}.approachCopy>p{font-size:13.5px;line-height:1.48;margin-bottom:0}.principles{margin-top:13px;gap:7px}.principle{padding:11px 13px;border-radius:15px}.principle strong{font-size:14px;margin-bottom:2px}.principle p{font-size:10.5px;line-height:1.35}.parentLine{font-size:12.5px;line-height:1.42;margin-top:10px}.dashboard{padding:14px;border-radius:20px;margin-top:12px}.dashTop{font-size:14px;margin-bottom:8px}.scorePanel{padding:10px 12px;border-radius:14px;margin-bottom:6px}.scorePanelTop span{font-size:9px}.scorePanelTop b{font-size:24px}.progress{height:6px;margin-top:7px}.dashGrid{gap:5px}.dashBox{padding:8px 9px;border-radius:12px}.dashBox span{font-size:7.5px;margin-bottom:3px}.dashBox strong{font-size:11px}
+
+      .trialCard{padding:20px 17px;border-radius:25px}.trialGrid{display:block}.trialCard .screenTitle{font-size:34px;margin-bottom:12px}.trialCopy p{font-size:13.5px;line-height:1.48;margin-bottom:12px}.trialPoints{gap:6px;margin:13px 0}.trialPoint{padding:10px 12px;border-radius:13px;font-size:11.5px}.trialAction{margin-top:14px}.finalNote{font-size:9.5px!important;line-height:1.4!important;margin-top:9px!important}.miniFooter{display:none}
     }
-    @media(max-height:700px) and (max-width:650px){.screen{padding-top:48px;padding-bottom:36px}.aboutVisual .photo{height:22svh}.aboutCopy h2,.screenTitle{font-size:32px}.aboutLead{font-size:14px}.aboutCopy p{font-size:12px}.moment{font-size:12px}.caseCard,.reviewCard{height:27svh;min-height:170px}.caseScore{margin:3svh 0 5px}.principle p{display:none}.parentLine{margin-top:7px}.trialCard{padding:18px 16px}.trialPoint{padding:9px 11px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.swipeHint i{animation:none}.carouselTrack{transition:none}}
+
+    @media(max-width:650px) and (max-height:720px){
+      .screen{padding-top:max(50px,calc(39px + env(safe-area-inset-top)));padding-bottom:max(32px,calc(24px + env(safe-area-inset-bottom)))}
+      h1{font-size:35px}.lead{font-size:13.5px}.proof{padding:6px 8px}.aboutVisual{width:68px;height:68px;margin-bottom:10px}.aboutVisual .photo{height:58px}.aboutCopy h2,.screenTitle{font-size:30px}.aboutLead{font-size:13.5px}.aboutCopy p{font-size:11.5px}.moment{font-size:11.5px;padding:10px 12px}.caseCard,.reviewCard{height:46dvh;min-height:280px}.caseScore{margin:6dvh 0 8px}.principle p{display:none}.dashboard{margin-top:8px}.trialPoint{padding:8px 10px}.finalNote{display:none}
+    }
+
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.swipeHint i,.nextHint{animation:none}.carouselTrack{transition:none}}
   </style>
 </head>
 <body>
   <aside class="pager" aria-label="Навигация по странице"></aside>
 
-  <section class="screen dark hero" data-theme="dark" id="top">
+  <section class="screen dark" data-theme="dark" id="top">
     <div class="nav"><div class="brand">Фёдор</div><a href="#trial">Бесплатный пробный</a></div>
     <div class="shell heroGrid">
       <div>
@@ -70,17 +84,19 @@
       <div class="aboutVisual"><div class="photo"></div></div>
       <div class="aboutCopy">
         <h2>Я сам недавно был по другую сторону экзамена</h2>
-        <p class="aboutLead">ОГЭ я сдал на 31/31, ЕГЭ — на 92. Но преподавание быстро показало мне: хорошо объяснять математику недостаточно.</p>
+        <p class="aboutLead">ОГЭ я сдал на 31/31, ЕГЭ — на 92. Но преподавание быстро показало: хорошо объяснять математику недостаточно.</p>
         <p>Ученик может всё понять на уроке, а потом неделю ничего не делать. Может иметь четвёрку в школе и проваливать пробник.</p>
-        <div class="moment">Поэтому я перестал думать отдельными уроками. Мне важнее видеть, где ученик сейчас, что мешает набрать нужный балл и что делать следующим шагом.</div>
+        <div class="moment">Поэтому мне важнее видеть, где ученик сейчас, что мешает набрать нужный балл и что делать следующим шагом.</div>
         <div class="stats"><div class="stat"><strong>1,5+ года</strong> преподаю</div><div class="stat"><strong>15</strong> учеников за прошлый год</div></div>
       </div>
     </div>
+    <i class="nextHint">↓</i>
   </section>
 
   <section class="screen dark" data-theme="dark" id="evidence">
     <div class="shell evidenceWrap">
       <div class="evidenceTop"><h2 class="screenTitle">Что получается у учеников</h2><p>Кейсы и отзывы можно листать отдельно.</p></div>
+      <div class="evidenceTabs" role="tablist" aria-label="Результаты и отзывы"><button class="evidenceTab active" type="button" data-target="casesCarousel">Кейсы</button><button class="evidenceTab" type="button" data-target="reviewsCarousel">Отзывы</button></div>
       <div class="evidenceGrid">
         <div class="carousel" id="casesCarousel">
           <div class="carouselViewport"><div class="carouselTrack">
@@ -98,96 +114,59 @@
         </div>
       </div>
     </div>
+    <i class="nextHint">↓</i>
   </section>
 
   <section class="screen light" data-theme="light" id="approach">
     <div class="shell approachGrid">
       <div class="approachCopy">
         <h2 class="screenTitle">Как я веду подготовку сейчас</h2>
-        <p>Не «проходим программу» подряд. Смотрим, что быстрее всего приближает конкретного ученика к нужной оценке.</p>
+        <p>Не иду по программе подряд — смотрю, что быстрее приближает конкретного ученика к нужной оценке.</p>
         <div class="principles">
-          <div class="principle"><strong>Сначала нахожу точку А</strong><p>Какие задания получаются и где реально теряются баллы.</p></div>
-          <div class="principle"><strong>Между уроками есть короткая практика</strong><p>Я вижу ошибки и возвращаю слабые места в работу.</p></div>
-          <div class="principle"><strong>Результат проверяем пробниками</strong><p>Если баллы не растут — меняю акцент, а не продолжаю по шаблону.</p></div>
+          <div class="principle"><strong>Сначала нахожу точку А</strong><p>Где реально теряются баллы.</p></div>
+          <div class="principle"><strong>Между уроками — короткая практика</strong><p>Ошибки возвращаются в работу.</p></div>
+          <div class="principle"><strong>Проверяем себя пробниками</strong><p>Если баллы не растут — меняю акцент.</p></div>
         </div>
         <div class="parentLine">Родитель знает, что происходит, <b>но не становится вторым преподавателем.</b></div>
       </div>
       <div class="dashboard">
         <div class="dashTop">Картина по ученику</div>
         <div class="scorePanel"><div class="scorePanelTop"><span>Прогресс по плану</span><b>67%</b></div><div class="progress"><div></div></div></div>
-        <div class="dashGrid">
-          <div class="dashBox"><span>Пробник</span><strong>14 баллов</strong></div>
-          <div class="dashBox"><span>Цель</span><strong>18+ баллов</strong></div>
-          <div class="dashBox"><span>Слабое место</span><strong>Геометрия</strong></div>
-          <div class="dashBox"><span>Домашняя работа</span><strong>6/7</strong></div>
-        </div>
+        <div class="dashGrid"><div class="dashBox"><span>Пробник</span><strong>14 баллов</strong></div><div class="dashBox"><span>Цель</span><strong>18+ баллов</strong></div><div class="dashBox"><span>Слабое место</span><strong>Геометрия</strong></div><div class="dashBox"><span>Домашняя работа</span><strong>6/7</strong></div></div>
       </div>
     </div>
+    <i class="nextHint">↓</i>
   </section>
 
   <section class="screen dark" data-theme="dark" id="trial">
-    <div class="shell">
-      <div class="trialCard">
-        <div class="trialGrid">
-          <div class="trialCopy">
-            <h2 class="screenTitle">Начнём с бесплатного пробного урока</h2>
-            <p>За 40 минут посмотрим реальный уровень, найдём основные пробелы и поймём, какой путь до 4–5 выглядит реалистично.</p>
-            <div class="trialAction"><a class="btn primary" href="#">Записаться на пробный урок</a></div>
-            <p class="finalNote">После занятия расскажу родителю, что увидел и как бы я выстроил дальнейшую подготовку.</p>
-          </div>
-          <div class="trialPoints">
-            <div class="trialPoint"><b>01</b> Знакомимся и обсуждаем цель</div>
-            <div class="trialPoint"><b>02</b> Решаем несколько задач ОГЭ</div>
-            <div class="trialPoint"><b>03</b> Разбираем ошибки</div>
-            <div class="trialPoint"><b>04</b> Формулируем следующий шаг</div>
-          </div>
-        </div>
+    <div class="shell"><div class="trialCard"><div class="trialGrid">
+      <div class="trialCopy">
+        <h2 class="screenTitle">Начнём с бесплатного пробного урока</h2>
+        <p>За 40 минут посмотрим реальный уровень, найдём основные пробелы и поймём, какой путь до 4–5 реалистичен.</p>
+        <div class="trialAction"><a class="btn primary" href="#">Записаться на пробный урок</a></div>
+        <p class="finalNote">После занятия расскажу родителю, что увидел и как бы я выстроил подготовку.</p>
       </div>
-    </div>
+      <div class="trialPoints"><div class="trialPoint"><b>01</b> Знакомимся и обсуждаем цель</div><div class="trialPoint"><b>02</b> Решаем несколько задач ОГЭ</div><div class="trialPoint"><b>03</b> Разбираем ошибки</div><div class="trialPoint"><b>04</b> Формулируем следующий шаг</div></div>
+    </div></div></div>
     <div class="miniFooter">Фёдор • подготовка к ОГЭ по математике • 2026</div>
   </section>
 
   <script>
     const screens=[...document.querySelectorAll('.screen')];
     const pager=document.querySelector('.pager');
-    const pagerButtons=screens.map((screen,i)=>{
-      const b=document.createElement('button');
-      b.type='button';
-      b.setAttribute('aria-label','Экран '+(i+1));
-      b.addEventListener('click',()=>screen.scrollIntoView({behavior:'smooth'}));
-      pager.appendChild(b);
-      return b;
-    });
-    const observer=new IntersectionObserver(entries=>{
-      const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
-      if(!visible)return;
-      const index=screens.indexOf(visible.target);
-      pagerButtons.forEach((b,i)=>b.classList.toggle('active',i===index));
-      pager.classList.toggle('lightMode',visible.target.dataset.theme==='light');
-    },{threshold:[.55,.7,.85]});
+    const pagerButtons=screens.map((screen,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Экран '+(i+1));b.addEventListener('click',()=>screen.scrollIntoView({behavior:'smooth'}));pager.appendChild(b);return b;});
+    const observer=new IntersectionObserver(entries=>{const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(!visible)return;const index=screens.indexOf(visible.target);pagerButtons.forEach((b,i)=>b.classList.toggle('active',i===index));pager.classList.toggle('lightMode',visible.target.dataset.theme==='light');},{threshold:[.55,.7,.85]});
     screens.forEach(s=>observer.observe(s));
 
-    function initCarousel(id){
-      const root=document.getElementById(id); if(!root)return;
-      const track=root.querySelector('.carouselTrack');
-      const slides=[...root.querySelectorAll('.slide')];
-      let index=0,startX=null,startY=null;
-      const render=()=>{track.style.transform=`translateX(-${index*100}%)`;};
-      root.querySelector('.prev').addEventListener('click',()=>{index=(index-1+slides.length)%slides.length;render();});
-      root.querySelector('.next').addEventListener('click',()=>{index=(index+1)%slides.length;render();});
-      const viewport=root.querySelector('.carouselViewport');
-      viewport.addEventListener('pointerdown',e=>{startX=e.clientX;startY=e.clientY;});
-      viewport.addEventListener('pointerup',e=>{
-        if(startX===null)return;
-        const dx=e.clientX-startX,dy=e.clientY-startY;
-        if(Math.abs(dx)>45 && Math.abs(dx)>Math.abs(dy)*1.25){index=dx<0?(index+1)%slides.length:(index-1+slides.length)%slides.length;render();}
-        startX=startY=null;
-      });
-      viewport.addEventListener('pointercancel',()=>{startX=startY=null;});
-      render();
-    }
-    initCarousel('casesCarousel');
-    initCarousel('reviewsCarousel');
+    function initCarousel(id){const root=document.getElementById(id);if(!root)return;const track=root.querySelector('.carouselTrack');const slides=[...root.querySelectorAll('.slide')];let index=0,startX=null,startY=null;const render=()=>{track.style.transform=`translateX(-${index*100}%)`;};root.querySelector('.prev').addEventListener('click',()=>{index=(index-1+slides.length)%slides.length;render();});root.querySelector('.next').addEventListener('click',()=>{index=(index+1)%slides.length;render();});const viewport=root.querySelector('.carouselViewport');viewport.addEventListener('pointerdown',e=>{startX=e.clientX;startY=e.clientY;});viewport.addEventListener('pointerup',e=>{if(startX===null)return;const dx=e.clientX-startX,dy=e.clientY-startY;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)*1.2){index=dx<0?(index+1)%slides.length:(index-1+slides.length)%slides.length;render();}startX=startY=null;});viewport.addEventListener('pointercancel',()=>{startX=startY=null;});render();}
+    initCarousel('casesCarousel');initCarousel('reviewsCarousel');
+
+    const evidenceTabs=[...document.querySelectorAll('.evidenceTab')];
+    function setEvidence(target){evidenceTabs.forEach(tab=>tab.classList.toggle('active',tab.dataset.target===target));document.querySelectorAll('#evidence .carousel').forEach(c=>c.classList.toggle('mobileHidden',c.id!==target));}
+    evidenceTabs.forEach(tab=>tab.addEventListener('click',()=>setEvidence(tab.dataset.target)));
+    const mobileQuery=window.matchMedia('(max-width:650px)');
+    const syncEvidence=()=>{if(mobileQuery.matches)setEvidence(document.querySelector('.evidenceTab.active')?.dataset.target||'casesCarousel');else document.querySelectorAll('#evidence .carousel').forEach(c=>c.classList.remove('mobileHidden'));};
+    mobileQuery.addEventListener?.('change',syncEvidence);syncEvidence();
   </script>
 </body>
 </html>
