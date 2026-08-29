@@ -2,108 +2,192 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Фёдор — подготовка к ОГЭ по математике</title>
   <meta name="description" content="Подготовка к ОГЭ по математике для 9 класса: цель 4–5, понятный план и бесплатный пробный урок." />
   <style>
-    :root{--navy:#061328;--navy2:#0a234b;--blue:#6cabff;--blue2:#9ed0ff;--ice:#edf7ff;--ink:#08162d;--muted:#63758d;--shadow:0 30px 100px rgba(1,19,52,.28)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--navy);color:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}a{text-decoration:none;color:inherit}button{font:inherit}h1,h2,h3,p{margin-top:0}.shell{width:min(1180px,calc(100% - 40px));margin:auto}.section{padding:108px 0;position:relative;overflow:hidden}
-    .liquid{position:relative;background:linear-gradient(135deg,rgba(255,255,255,.17),rgba(255,255,255,.055));border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),var(--shadow);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);overflow:hidden}.liquid:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.14),transparent 28%,transparent 72%,rgba(126,190,255,.07));pointer-events:none}.blueScene{background:radial-gradient(circle at 14% 16%,rgba(82,156,255,.34),transparent 28%),radial-gradient(circle at 84% 18%,rgba(60,126,255,.28),transparent 30%),linear-gradient(145deg,#061328 0%,#0a234b 52%,#071a37 100%)}
-    .nav{height:86px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:3}.brand{font-size:24px;font-weight:900;letter-spacing:-.05em}.nav a,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:18px;font-weight:850;transition:.2s transform ease}.nav a:hover,.btn:hover{transform:translateY(-2px)}.nav a{padding:12px 18px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.17);backdrop-filter:blur(16px);font-size:14px}.btn{min-height:54px;padding:0 22px;font-size:15px}.primary{background:linear-gradient(135deg,#6cabff,#9ed0ff);color:#07172f;box-shadow:0 16px 38px rgba(77,147,255,.28)}
-    .hero{min-height:760px;border-radius:0 0 52px 52px;padding-bottom:74px}.heroGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:66px;align-items:center;padding:72px 0 50px}.kicker{font-size:13px;font-weight:800;color:#9dcbff;margin-bottom:18px}h1{font-size:clamp(56px,6.4vw,88px);line-height:.95;letter-spacing:-.068em;margin-bottom:26px;max-width:850px}h1 span{background:linear-gradient(90deg,#83c0ff,#d9efff);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:20px;line-height:1.62;color:rgba(232,243,255,.72);max-width:700px}.actions{margin:32px 0 24px}.proofRow{display:flex;gap:10px;flex-wrap:wrap}.proof{padding:10px 13px;border-radius:999px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.13);font-size:13px;font-weight:780;color:rgba(255,255,255,.86)}.heroVisual{display:flex;align-items:center;justify-content:center}.portraitCard{width:min(430px,100%);padding:18px;border-radius:34px;transform:rotate(1.5deg)}.photo{height:430px;border-radius:27px;background:linear-gradient(145deg,#badbff 0%,#6ea1d8 48%,#294f80 100%);position:relative;overflow:hidden}.photo:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.25);top:60px;left:50%;transform:translateX(-50%)}.photo:after{content:"";position:absolute;width:260px;height:290px;border-radius:140px 140px 28px 28px;background:rgba(5,23,52,.77);bottom:-86px;left:50%;transform:translateX(-50%)}.portraitFoot{display:flex;justify-content:space-between;align-items:end;padding:18px 6px 2px}.portraitFoot strong{font-size:24px}.portraitFoot span{font-size:12px;color:rgba(255,255,255,.58)}
-    .storySection{background:linear-gradient(180deg,#edf7ff,#f8fbff);color:var(--ink)}.storyGrid{display:grid;grid-template-columns:.78fr 1.22fr;gap:54px;align-items:center}.storyVisual{border-radius:34px;padding:16px;background:linear-gradient(150deg,#08204a,#0d3b78);box-shadow:0 30px 90px rgba(24,74,135,.18)}.storyVisual .photo{height:500px}.storyCopy h2{font-size:clamp(43px,4.8vw,68px);line-height:1;letter-spacing:-.055em;margin-bottom:26px}.storyLead{font-size:22px;line-height:1.55;color:#263b59;margin-bottom:24px}.storyCopy p{font-size:17px;line-height:1.75;color:#5f7087;max-width:700px}.storyMoment{margin:28px 0;padding:25px 27px;border-radius:24px;background:linear-gradient(135deg,rgba(77,143,255,.13),rgba(255,255,255,.82));border:1px solid rgba(55,115,195,.12);font-size:20px;line-height:1.55;color:#183454}.stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.stat{padding:14px 16px;border-radius:18px;background:white;border:1px solid rgba(38,92,160,.1)}.stat strong{font-size:22px;margin-right:6px}.stat span{font-size:12px;color:#6b7b91}
-    .evidenceSection{background:linear-gradient(180deg,#07152e,#0b234b)}.sectionTitle{font-size:clamp(42px,4.7vw,66px);line-height:1;letter-spacing:-.055em;margin-bottom:44px;max-width:800px}.evidenceGrid{display:grid;grid-template-columns:1.12fr .88fr;gap:22px}.carouselViewport{overflow:hidden;border-radius:34px}.carouselTrack{display:flex;transition:transform .45s cubic-bezier(.2,.8,.2,1)}.slide{min-width:100%;padding:2px}.caseCard,.reviewCard{min-height:470px;border-radius:32px;padding:32px;background:linear-gradient(145deg,rgba(255,255,255,.15),rgba(255,255,255,.055));border:1px solid rgba(255,255,255,.17);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 25px 80px rgba(0,17,52,.25);backdrop-filter:blur(22px)}.caseCard{background:radial-gradient(circle at 85% 12%,rgba(113,190,255,.22),transparent 28%),linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.055))}.caseName{font-size:14px;font-weight:800;color:#a7d2ff}.caseScore{display:flex;gap:22px;align-items:center;margin:72px 0 18px}.caseScore span{font-size:90px;font-weight:900;letter-spacing:-.07em}.caseScore i{font-style:normal;font-size:42px;color:#85c1ff}.caseCard h3{font-size:30px;letter-spacing:-.04em;margin-bottom:12px}.caseCard p{color:rgba(230,242,255,.62);line-height:1.6;max-width:620px}.reviewCard{display:flex;flex-direction:column}.reviewCard strong{font-size:19px;margin-bottom:20px}.reviewShot{flex:1;border-radius:24px;background:rgba(255,255,255,.07);border:1px dashed rgba(202,228,255,.28);display:grid;place-items:center;text-align:center;padding:26px;color:rgba(232,244,255,.52);line-height:1.6}.controls{display:flex;gap:8px;margin-top:14px}.arrow{width:46px;height:46px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);color:#fff;cursor:pointer;font-size:20px}
-    .approachSection{background:linear-gradient(180deg,#edf7ff,#f8fbff);color:var(--ink)}.approachGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}.approachCopy h2{font-size:clamp(42px,4.8vw,68px);line-height:1;letter-spacing:-.055em;margin-bottom:24px}.approachCopy>p{font-size:19px;line-height:1.66;color:#5e718c;max-width:660px}.principles{display:grid;gap:12px;margin-top:30px}.principle{padding:22px 24px;border-radius:22px;background:white;border:1px solid rgba(37,91,160,.1);box-shadow:0 15px 40px rgba(27,70,125,.06)}.principle strong{display:block;font-size:20px;margin-bottom:6px}.principle p{margin:0;color:#687a91;line-height:1.55;font-size:14px}.dashboard{padding:28px;border-radius:34px;background:linear-gradient(145deg,#0a2146,#0d356b);color:white;box-shadow:0 30px 90px rgba(22,72,135,.2)}.dashTop{font-size:24px;font-weight:850;margin-bottom:22px}.scorePanel{padding:24px;border-radius:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);margin-bottom:14px}.scorePanelTop{display:flex;justify-content:space-between;align-items:end}.scorePanelTop span{font-size:13px;color:rgba(230,242,255,.58)}.scorePanelTop b{font-size:44px;letter-spacing:-.06em}.progressTrack{height:12px;border-radius:999px;background:rgba(255,255,255,.1);margin-top:18px;overflow:hidden}.progressFill{width:67%;height:100%;background:linear-gradient(90deg,#6aabff,#a1d1ff)}.dashGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.dashBox{padding:18px;border-radius:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}.dashBox span{display:block;font-size:11px;color:#92c4ff;margin-bottom:10px}.dashBox strong{font-size:18px}.parentLine{margin-top:28px;font-size:20px;line-height:1.5;color:#29405f}.parentLine b{color:#0e4d9d}
-    .trialSection{background:linear-gradient(180deg,#eaf5ff,#f9fcff);color:var(--ink)}.trialWrap{border-radius:40px;padding:46px;background:radial-gradient(circle at 82% 15%,rgba(121,195,255,.22),transparent 30%),linear-gradient(145deg,#0a2146,#0d356b);color:#fff;box-shadow:0 34px 100px rgba(22,72,135,.22)}.trialGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}.trialWrap h2{font-size:clamp(44px,5vw,72px);line-height:.97;letter-spacing:-.06em;margin-bottom:20px}.trialWrap p{font-size:18px;line-height:1.62;color:rgba(230,243,255,.66);max-width:650px}.trialPoints{display:grid;gap:12px}.trialPoint{padding:18px 20px;border-radius:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);font-size:15px}.trialPoint b{color:#a9d6ff}.trialAction{margin-top:28px}
-    footer{padding:28px 0;background:#04101f;color:rgba(230,241,255,.48)}.footer{display:flex;justify-content:space-between;font-size:12px}
-    @media(max-width:980px){.heroGrid,.storyGrid,.evidenceGrid,.approachGrid,.trialGrid{grid-template-columns:1fr}.storyVisual .photo{height:420px}.dashGrid{grid-template-columns:1fr 1fr}}
-    @media(max-width:650px){.shell{width:min(100% - 24px,1180px)}.nav{height:76px}.nav a{display:none}.hero{min-height:auto;border-radius:0 0 30px 30px}.heroGrid{padding:44px 0 56px;gap:34px}h1{font-size:50px}.lead{font-size:17px}.portraitCard{padding:13px}.photo{height:330px}.section{padding:76px 0}.storyVisual .photo{height:350px}.storyCopy h2,.sectionTitle,.approachCopy h2,.trialWrap h2{font-size:40px}.storyLead{font-size:19px}.caseCard,.reviewCard{min-height:430px;padding:24px}.caseScore span{font-size:68px}.dashGrid{grid-template-columns:1fr}.trialWrap{padding:28px 20px;border-radius:30px}.footer{flex-direction:column;gap:10px}}
+    :root{--navy:#061328;--navy2:#0b2855;--blue:#6faeff;--blue2:#a7d7ff;--ice:#eef7ff;--ink:#08162d;--text:#334963;--muted:#6c7f96;--shadow:0 28px 90px rgba(3,22,55,.24)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-snap-type:y mandatory;background:var(--navy)}
+    body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#fff;background:var(--navy);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}button{font:inherit}h1,h2,h3,p{margin-top:0}
+    .screen{height:100svh;min-height:100svh;scroll-snap-align:start;scroll-snap-stop:always;position:relative;overflow:hidden;display:flex;align-items:center}
+    .shell{width:min(1180px,calc(100% - 44px));margin:auto;position:relative;z-index:2}
+    .dark{background:radial-gradient(circle at 16% 18%,rgba(83,158,255,.33),transparent 27%),radial-gradient(circle at 83% 20%,rgba(47,119,255,.27),transparent 31%),linear-gradient(145deg,#061328 0%,#0a244d 52%,#071a37 100%)}
+    .light{background:radial-gradient(circle at 82% 18%,rgba(93,158,255,.16),transparent 29%),linear-gradient(180deg,#eef7ff,#fbfdff);color:var(--ink)}
+    .liquid{background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.19);box-shadow:inset 0 1px 0 rgba(255,255,255,.24),var(--shadow);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border-radius:18px;font-size:15px;font-weight:850;border:0;cursor:pointer;transition:.2s transform ease}
+    .btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(135deg,#70afff,#a4d5ff);color:#07172f;box-shadow:0 15px 36px rgba(77,147,255,.28)}
+
+    .nav{position:absolute;top:max(18px,env(safe-area-inset-top));left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;width:min(1180px,calc(100% - 44px));margin:auto}.brand{font-size:24px;font-weight:900;letter-spacing:-.05em}.nav a{padding:11px 16px;border-radius:16px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.15);font-size:13px;font-weight:800;backdrop-filter:blur(16px)}
+    .heroGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center}.kicker{font-size:13px;color:#a6d2ff;font-weight:800;margin-bottom:16px}h1{font-size:clamp(54px,6.3vw,86px);line-height:.95;letter-spacing:-.068em;margin-bottom:24px;max-width:850px}h1 span{background:linear-gradient(90deg,#81beff,#ddf1ff);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:19px;line-height:1.58;color:rgba(233,243,255,.72);max-width:690px;margin-bottom:28px}.proofs{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}.proof{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.13);font-size:12px;font-weight:780;color:rgba(255,255,255,.86)}
+    .portrait{width:min(410px,100%);margin:auto;padding:16px;border-radius:32px;transform:rotate(1.2deg)}.photo{height:min(46svh,430px);border-radius:25px;background:linear-gradient(145deg,#c5e1ff 0%,#70a4dd 47%,#284d7e 100%);position:relative;overflow:hidden}.photo:before{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.25);top:12%;left:50%;transform:translateX(-50%)}.photo:after{content:"";position:absolute;width:250px;height:285px;border-radius:140px 140px 28px 28px;background:rgba(5,23,52,.77);bottom:-88px;left:50%;transform:translateX(-50%)}.portraitFoot{display:flex;justify-content:space-between;align-items:end;padding:16px 5px 2px}.portraitFoot strong{font-size:23px}.portraitFoot span{font-size:12px;color:rgba(255,255,255,.58)}
+    .swipeHint{position:absolute;z-index:4;left:50%;bottom:max(18px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;align-items:center;gap:9px;color:rgba(238,247,255,.56);font-size:12px;white-space:nowrap}.swipeHint i{font-style:normal;font-size:20px;animation:hint 1.6s ease-in-out infinite}@keyframes hint{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(7px);opacity:1}}
+
+    .aboutGrid{display:grid;grid-template-columns:.72fr 1.28fr;gap:54px;align-items:center}.aboutVisual{padding:14px;border-radius:30px;background:linear-gradient(150deg,#08204a,#0d3b78);box-shadow:0 25px 80px rgba(24,74,135,.18)}.aboutVisual .photo{height:min(55svh,500px)}.aboutCopy h2,.screenTitle{font-size:clamp(40px,4.8vw,66px);line-height:1;letter-spacing:-.055em;margin-bottom:22px}.aboutLead{font-size:21px;line-height:1.55;color:#263b59;margin-bottom:20px}.aboutCopy p{font-size:16px;line-height:1.7;color:#607188;max-width:700px;margin-bottom:15px}.moment{padding:19px 22px;border-radius:21px;background:rgba(78,145,255,.1);border:1px solid rgba(55,115,195,.11);font-size:17px;line-height:1.52;color:#183454;margin:20px 0}.stats{display:flex;gap:9px;flex-wrap:wrap}.stat{padding:11px 14px;border-radius:16px;background:#fff;border:1px solid rgba(38,92,160,.1);font-size:12px;color:#6a7b91}.stat strong{font-size:19px;color:var(--ink);margin-right:5px}
+
+    .evidenceWrap{width:100%}.evidenceTop{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:26px}.evidenceTop .screenTitle{margin:0;max-width:720px}.evidenceTop p{margin:0;max-width:350px;color:rgba(231,242,255,.57);font-size:14px;line-height:1.5}.evidenceGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.carouselViewport{overflow:hidden;border-radius:30px;touch-action:pan-y}.carouselTrack{display:flex;transition:transform .4s cubic-bezier(.2,.8,.2,1)}.slide{min-width:100%;padding:1px}.caseCard,.reviewCard{height:min(55svh,470px);border-radius:29px;padding:28px;background:linear-gradient(145deg,rgba(255,255,255,.15),rgba(255,255,255,.055));border:1px solid rgba(255,255,255,.17);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 24px 70px rgba(0,17,52,.24);backdrop-filter:blur(22px)}.caseCard{background:radial-gradient(circle at 85% 12%,rgba(113,190,255,.22),transparent 28%),linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.055))}.caseName{font-size:13px;font-weight:800;color:#a8d3ff}.caseScore{display:flex;gap:18px;align-items:center;margin:11svh 0 14px}.caseScore span{font-size:clamp(58px,7vw,88px);font-weight:900;letter-spacing:-.07em}.caseScore i{font-style:normal;font-size:36px;color:#85c1ff}.caseCard h3{font-size:27px;letter-spacing:-.04em;margin-bottom:8px}.caseCard p{font-size:14px;color:rgba(230,242,255,.61);line-height:1.55}.reviewCard{display:flex;flex-direction:column}.reviewCard strong{font-size:18px;margin-bottom:14px}.reviewShot{flex:1;border-radius:22px;background:rgba(255,255,255,.07);border:1px dashed rgba(202,228,255,.25);display:grid;place-items:center;text-align:center;padding:24px;color:rgba(232,244,255,.52);font-size:14px;line-height:1.55}.controls{display:flex;gap:7px;margin-top:11px}.arrow{width:43px;height:43px;border-radius:15px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.07);color:#fff;cursor:pointer;font-size:19px}
+
+    .approachGrid{display:grid;grid-template-columns:.95fr 1.05fr;gap:32px;align-items:center}.approachCopy>p{font-size:18px;line-height:1.62;color:#61738b;max-width:650px}.principles{display:grid;gap:10px;margin-top:24px}.principle{padding:17px 20px;border-radius:20px;background:#fff;border:1px solid rgba(37,91,160,.1);box-shadow:0 12px 32px rgba(27,70,125,.05)}.principle strong{display:block;font-size:18px;margin-bottom:4px}.principle p{margin:0;color:#697b91;line-height:1.48;font-size:13px}.dashboard{padding:25px;border-radius:31px;background:linear-gradient(145deg,#0a2146,#0d356b);color:#fff;box-shadow:0 28px 80px rgba(22,72,135,.18)}.dashTop{font-size:21px;font-weight:850;margin-bottom:17px}.scorePanel{padding:20px;border-radius:21px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);margin-bottom:11px}.scorePanelTop{display:flex;justify-content:space-between;align-items:end}.scorePanelTop span{font-size:12px;color:rgba(230,242,255,.57)}.scorePanelTop b{font-size:38px;letter-spacing:-.06em}.progress{height:10px;border-radius:999px;background:rgba(255,255,255,.1);margin-top:14px;overflow:hidden}.progress div{width:67%;height:100%;background:linear-gradient(90deg,#6aabff,#a1d1ff)}.dashGrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.dashBox{padding:15px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}.dashBox span{display:block;font-size:10px;color:#92c4ff;margin-bottom:7px}.dashBox strong{font-size:16px}.parentLine{margin-top:20px;font-size:17px;line-height:1.48;color:#29405f}.parentLine b{color:#0e4d9d}
+
+    .trialCard{padding:44px;border-radius:38px;background:radial-gradient(circle at 82% 15%,rgba(121,195,255,.22),transparent 30%),linear-gradient(145deg,#0a2146,#0d356b);box-shadow:0 34px 100px rgba(22,72,135,.22)}.trialGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}.trialCard .screenTitle{margin-bottom:18px}.trialCard>div p,.trialCopy p{font-size:17px;line-height:1.6;color:rgba(230,243,255,.66);max-width:650px}.trialPoints{display:grid;gap:10px}.trialPoint{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);font-size:14px}.trialPoint b{color:#a9d6ff}.trialAction{margin-top:25px}.finalNote{margin-top:18px!important;font-size:12px!important;color:rgba(232,243,255,.48)!important}.miniFooter{position:absolute;left:0;right:0;bottom:max(14px,env(safe-area-inset-bottom));text-align:center;font-size:11px;color:rgba(232,243,255,.38)}
+
+    .pager{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:20;display:grid;gap:8px;padding:10px 8px;border-radius:999px;background:rgba(6,19,40,.28);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(14px)}.pager button{width:7px;height:7px;border:0;border-radius:999px;background:rgba(255,255,255,.28);padding:0;cursor:pointer;transition:.25s}.pager button.active{height:25px;background:#9fd0ff}.pager.lightMode{background:rgba(255,255,255,.46);border-color:rgba(38,92,160,.12)}.pager.lightMode button{background:rgba(25,73,136,.2)}.pager.lightMode button.active{background:#3276d2}
+
+    @media(max-width:900px){.heroGrid,.aboutGrid,.evidenceGrid,.approachGrid,.trialGrid{grid-template-columns:1fr}.heroVisual{display:none}.heroGrid{padding-top:60px}.aboutGrid{grid-template-columns:.8fr 1.2fr}.evidenceTop p{display:none}.caseCard,.reviewCard{height:42svh}.approachGrid{grid-template-columns:1fr 1fr}.trialGrid{grid-template-columns:1.12fr .88fr}}
+    @media(max-width:650px){
+      .shell{width:min(100% - 26px,1180px)}.screen{padding:calc(56px + env(safe-area-inset-top)) 0 calc(48px + env(safe-area-inset-bottom));align-items:center}.nav{width:min(100% - 26px,1180px);top:max(12px,env(safe-area-inset-top))}.brand{font-size:21px}.nav a{display:none}.pager{right:8px;gap:6px;padding:8px 6px}.pager button{width:6px;height:6px}.pager button.active{height:20px}
+      .heroGrid{display:block;padding:0}.kicker{font-size:11px;margin-bottom:12px}h1{font-size:clamp(43px,13vw,55px);margin-bottom:18px}.lead{font-size:16px;line-height:1.52;margin-bottom:22px}.btn{min-height:50px;padding:0 18px;font-size:14px}.proofs{margin-top:17px}.proof{font-size:11px;padding:8px 10px}.swipeHint{bottom:max(13px,env(safe-area-inset-bottom));font-size:11px}
+      .aboutGrid{display:flex;flex-direction:column;gap:17px}.aboutVisual{width:100%;padding:9px;border-radius:23px}.aboutVisual .photo{height:26svh;min-height:170px;border-radius:18px}.aboutCopy h2,.screenTitle{font-size:clamp(34px,10.5vw,44px);margin-bottom:13px}.aboutLead{font-size:16px;line-height:1.47;margin-bottom:10px}.aboutCopy p{font-size:13px;line-height:1.5;margin-bottom:8px}.moment{font-size:14px;line-height:1.45;padding:13px 15px;margin:10px 0}.stats{gap:6px}.stat{padding:8px 10px;font-size:10px}.stat strong{font-size:15px}
+      .evidenceTop{margin-bottom:12px}.evidenceTop .screenTitle{font-size:36px}.evidenceGrid{display:grid;grid-template-columns:1fr;gap:10px}.caseCard,.reviewCard{height:30svh;min-height:190px;padding:17px;border-radius:22px}.carouselViewport{border-radius:22px}.caseName{font-size:11px}.caseScore{margin:4.5svh 0 7px;gap:12px}.caseScore span{font-size:47px}.caseScore i{font-size:25px}.caseCard h3{font-size:18px;margin-bottom:4px}.caseCard p{font-size:11px;line-height:1.4}.reviewCard strong{font-size:14px;margin-bottom:8px}.reviewShot{font-size:11px;padding:13px;border-radius:16px}.controls{margin-top:6px}.arrow{width:38px;height:38px;border-radius:13px;font-size:17px}
+      .approachGrid{grid-template-columns:1fr;gap:14px}.approachCopy .screenTitle{font-size:36px}.approachCopy>p{font-size:14px;line-height:1.5}.principles{margin-top:13px;gap:7px}.principle{padding:11px 13px;border-radius:15px}.principle strong{font-size:15px}.principle p{font-size:11px;line-height:1.4}.dashboard{padding:16px;border-radius:22px}.dashTop{font-size:16px;margin-bottom:9px}.scorePanel{padding:12px;border-radius:15px;margin-bottom:7px}.scorePanelTop span{font-size:10px}.scorePanelTop b{font-size:29px}.progress{height:8px;margin-top:8px}.dashGrid{gap:6px}.dashBox{padding:9px;border-radius:13px}.dashBox span{font-size:8px;margin-bottom:4px}.dashBox strong{font-size:12px}.parentLine{font-size:13px;margin-top:10px}
+      .trialCard{padding:22px 18px;border-radius:26px}.trialGrid{grid-template-columns:1fr;gap:18px}.trialCard .screenTitle{font-size:38px}.trialCopy p{font-size:14px;line-height:1.5}.trialPoints{gap:7px}.trialPoint{padding:11px 13px;border-radius:14px;font-size:12px}.trialAction{margin-top:16px}.finalNote{font-size:10px!important;margin-top:10px!important}.miniFooter{font-size:9px}
+    }
+    @media(max-height:700px) and (max-width:650px){.screen{padding-top:48px;padding-bottom:36px}.aboutVisual .photo{height:22svh}.aboutCopy h2,.screenTitle{font-size:32px}.aboutLead{font-size:14px}.aboutCopy p{font-size:12px}.moment{font-size:12px}.caseCard,.reviewCard{height:27svh;min-height:170px}.caseScore{margin:3svh 0 5px}.principle p{display:none}.parentLine{margin-top:7px}.trialCard{padding:18px 16px}.trialPoint{padding:9px 11px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.swipeHint i{animation:none}.carouselTrack{transition:none}}
   </style>
 </head>
 <body>
-  <section class="hero blueScene">
-    <div class="shell">
-      <div class="nav"><div class="brand">Фёдор</div><a href="#trial">Бесплатный пробный</a></div>
-      <div class="heroGrid">
-        <div>
-          <div class="kicker">ОГЭ по математике • 9 класс</div>
-          <h1>Помогаю выйти на <span>4–5</span> и не жить весь год вокруг ОГЭ</h1>
-          <p class="lead">Разбираюсь, где ребёнок теряет баллы, выстраиваю подготовку и слежу за прогрессом. Родителю не приходится каждый вечер контролировать математику.</p>
-          <div class="actions"><a class="btn primary" href="#trial">Записаться на пробный урок</a></div>
-          <div class="proofRow"><div class="proof">31/31 ОГЭ</div><div class="proof">92 ЕГЭ</div><div class="proof">НИУ ВШЭ</div></div>
-        </div>
-        <div class="heroVisual"><div class="portraitCard liquid"><div class="photo"></div><div class="portraitFoot"><strong>Фёдор</strong><span>репетитор по математике</span></div></div></div>
+  <aside class="pager" aria-label="Навигация по странице"></aside>
+
+  <section class="screen dark hero" data-theme="dark" id="top">
+    <div class="nav"><div class="brand">Фёдор</div><a href="#trial">Бесплатный пробный</a></div>
+    <div class="shell heroGrid">
+      <div>
+        <div class="kicker">ОГЭ по математике • 9 класс</div>
+        <h1>Помогаю выйти на <span>4–5</span> и не жить весь год вокруг ОГЭ</h1>
+        <p class="lead">Разбираюсь, где ребёнок теряет баллы, выстраиваю подготовку и слежу за прогрессом. Родителю не приходится каждый вечер контролировать математику.</p>
+        <a class="btn primary" href="#trial">Записаться на пробный урок</a>
+        <div class="proofs"><div class="proof">31/31 ОГЭ</div><div class="proof">92 ЕГЭ</div><div class="proof">НИУ ВШЭ</div></div>
       </div>
+      <div class="portrait liquid"><div class="photo"></div><div class="portraitFoot"><strong>Фёдор</strong><span>репетитор по математике</span></div></div>
     </div>
+    <div class="swipeHint"><span>свайпните вверх</span><i>↓</i></div>
   </section>
 
-  <section class="section storySection" id="about">
-    <div class="shell"><div class="storyGrid">
-      <div class="storyVisual"><div class="photo"></div></div>
-      <div class="storyCopy">
+  <section class="screen light" data-theme="light" id="about">
+    <div class="shell aboutGrid">
+      <div class="aboutVisual"><div class="photo"></div></div>
+      <div class="aboutCopy">
         <h2>Я сам недавно был по другую сторону экзамена</h2>
-        <p class="storyLead">ОГЭ я сдал на 31/31, ЕГЭ — на 92. Но преподавание быстро показало мне, что хорошо объяснять математику недостаточно.</p>
-        <p>Ученик может всё понять на уроке и неделю ничего не делать. Может иметь четвёрку в школе и проваливать пробник. Может заниматься месяцами и не понимать, на какую оценку реально идёт.</p>
-        <div class="storyMoment">Поэтому со временем я стал смотреть не только на урок, а на весь путь ученика до экзамена: где он сейчас, что мешает набрать нужный балл и что должно измениться дальше.</div>
-        <p>За прошлый учебный год со мной занимались 15 учеников. Из их ошибок, прогресса и моих собственных промахов постепенно и сложился мой нынешний подход.</p>
-        <div class="stats"><div class="stat"><strong>1,5+ года</strong><span>преподаю</span></div><div class="stat"><strong>15</strong><span>учеников за прошлый год</span></div></div>
-      </div>
-    </div></div>
-  </section>
-
-  <section class="section evidenceSection" id="evidence">
-    <div class="shell">
-      <h2 class="sectionTitle">Результаты и отзывы</h2>
-      <div class="evidenceGrid">
-        <div class="carousel" id="casesCarousel"><div class="carouselViewport"><div class="carouselTrack">
-          <div class="slide"><article class="caseCard"><div class="caseName">Аделина • 9 класс</div><div class="caseScore"><span>2</span><i>→</i><span>4</span></div><h3>С первого пробника до четвёрки на ОГЭ</h3><p>Закрыли базовые пробелы, регулярно писали пробники и вышли на стабильный результат.</p></article></div>
-          <div class="slide"><article class="caseCard"><div class="caseName">Аля • 9 класс</div><div class="caseScore"><span>6</span><i>→</i><span>16</span></div><h3>Рост на 10 баллов</h3><p>Здесь добавим короткую реальную историю этого результата.</p></article></div>
-        </div></div><div class="controls"><button class="arrow prev">←</button><button class="arrow next">→</button></div></div>
-        <div class="carousel" id="reviewsCarousel"><div class="carouselViewport"><div class="carouselTrack">
-          <div class="slide"><article class="reviewCard"><strong>Отзыв родителя</strong><div class="reviewShot">Сюда вставим реальный скрин сообщения</div></article></div>
-          <div class="slide"><article class="reviewCard"><strong>Отзыв ученика</strong><div class="reviewShot">Сюда вставим реальный скрин сообщения</div></article></div>
-        </div></div><div class="controls"><button class="arrow prev">←</button><button class="arrow next">→</button></div></div>
+        <p class="aboutLead">ОГЭ я сдал на 31/31, ЕГЭ — на 92. Но преподавание быстро показало мне: хорошо объяснять математику недостаточно.</p>
+        <p>Ученик может всё понять на уроке, а потом неделю ничего не делать. Может иметь четвёрку в школе и проваливать пробник.</p>
+        <div class="moment">Поэтому я перестал думать отдельными уроками. Мне важнее видеть, где ученик сейчас, что мешает набрать нужный балл и что делать следующим шагом.</div>
+        <div class="stats"><div class="stat"><strong>1,5+ года</strong> преподаю</div><div class="stat"><strong>15</strong> учеников за прошлый год</div></div>
       </div>
     </div>
   </section>
 
-  <section class="section approachSection">
-    <div class="shell"><div class="approachGrid">
-      <div class="approachCopy">
-        <h2>Как я веду подготовку сейчас</h2>
-        <p>Без «уникальной методики». Просто несколько вещей, к которым я пришёл за время работы.</p>
-        <div class="principles">
-          <div class="principle"><strong>Сначала понимаю реальный уровень</strong><p>Не по оценке в журнале, а по заданиям ОГЭ и конкретным ошибкам.</p></div>
-          <div class="principle"><strong>Работаю от цели</strong><p>В первую очередь закрываем то, что сильнее всего влияет на нужную оценку.</p></div>
-          <div class="principle"><strong>Регулярно сверяюсь с результатом</strong><p>Пробники и домашняя работа показывают, работает ли подготовка или план пора менять.</p></div>
+  <section class="screen dark" data-theme="dark" id="evidence">
+    <div class="shell evidenceWrap">
+      <div class="evidenceTop"><h2 class="screenTitle">Что получается у учеников</h2><p>Кейсы и отзывы можно листать отдельно.</p></div>
+      <div class="evidenceGrid">
+        <div class="carousel" id="casesCarousel">
+          <div class="carouselViewport"><div class="carouselTrack">
+            <div class="slide"><article class="caseCard"><div class="caseName">Аделина • 9 класс</div><div class="caseScore"><span>2</span><i>→</i><span>4</span></div><h3>До итоговой четвёрки на ОГЭ</h3><p>Закрыли базовые пробелы и стабилизировали результат на пробниках.</p></article></div>
+            <div class="slide"><article class="caseCard"><div class="caseName">Аля • 9 класс</div><div class="caseScore"><span>6</span><i>→</i><span>16</span></div><h3>Рост на 10 баллов</h3><p>Здесь добавим короткую реальную историю подготовки.</p></article></div>
+          </div></div>
+          <div class="controls"><button class="arrow prev" aria-label="Предыдущий кейс">←</button><button class="arrow next" aria-label="Следующий кейс">→</button></div>
         </div>
-        <div class="parentLine">Если ученик начинает выпадать, я вижу это раньше весны. <b>Родителю не нужно самому становиться менеджером подготовки.</b></div>
+        <div class="carousel" id="reviewsCarousel">
+          <div class="carouselViewport"><div class="carouselTrack">
+            <div class="slide"><article class="reviewCard"><strong>Отзыв родителя</strong><div class="reviewShot">Здесь будет реальный скрин сообщения</div></article></div>
+            <div class="slide"><article class="reviewCard"><strong>Отзыв ученика</strong><div class="reviewShot">Здесь будет ещё один реальный скрин</div></article></div>
+          </div></div>
+          <div class="controls"><button class="arrow prev" aria-label="Предыдущий отзыв">←</button><button class="arrow next" aria-label="Следующий отзыв">→</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen light" data-theme="light" id="approach">
+    <div class="shell approachGrid">
+      <div class="approachCopy">
+        <h2 class="screenTitle">Как я веду подготовку сейчас</h2>
+        <p>Не «проходим программу» подряд. Смотрим, что быстрее всего приближает конкретного ученика к нужной оценке.</p>
+        <div class="principles">
+          <div class="principle"><strong>Сначала нахожу точку А</strong><p>Какие задания получаются и где реально теряются баллы.</p></div>
+          <div class="principle"><strong>Между уроками есть короткая практика</strong><p>Я вижу ошибки и возвращаю слабые места в работу.</p></div>
+          <div class="principle"><strong>Результат проверяем пробниками</strong><p>Если баллы не растут — меняю акцент, а не продолжаю по шаблону.</p></div>
+        </div>
+        <div class="parentLine">Родитель знает, что происходит, <b>но не становится вторым преподавателем.</b></div>
       </div>
       <div class="dashboard">
-        <div class="dashTop">Пример того, что я отслеживаю</div>
-        <div class="scorePanel"><div class="scorePanelTop"><span>Прогресс по текущему плану</span><b>67%</b></div><div class="progressTrack"><div class="progressFill"></div></div></div>
+        <div class="dashTop">Картина по ученику</div>
+        <div class="scorePanel"><div class="scorePanelTop"><span>Прогресс по плану</span><b>67%</b></div><div class="progress"><div></div></div></div>
         <div class="dashGrid">
-          <div class="dashBox"><span>Последний пробник</span><strong>14 баллов</strong></div>
+          <div class="dashBox"><span>Пробник</span><strong>14 баллов</strong></div>
           <div class="dashBox"><span>Цель</span><strong>18+ баллов</strong></div>
-          <div class="dashBox"><span>Сейчас в работе</span><strong>Геометрия</strong></div>
+          <div class="dashBox"><span>Слабое место</span><strong>Геометрия</strong></div>
           <div class="dashBox"><span>Домашняя работа</span><strong>6/7</strong></div>
         </div>
       </div>
-    </div></div>
+    </div>
   </section>
 
-  <section class="section trialSection" id="trial">
-    <div class="shell"><div class="trialWrap"><div class="trialGrid">
-      <div><h2>Начнём с бесплатного пробного урока</h2><p>За 40 минут посмотрим, как ребёнок решает реальные задания ОГЭ, где теряет баллы и насколько сейчас далеко до нужной оценки.</p><div class="trialAction"><a class="btn primary" href="#">Записаться на пробный урок</a></div></div>
-      <div class="trialPoints"><div class="trialPoint"><b>1.</b> Определим текущий уровень</div><div class="trialPoint"><b>2.</b> Найдём главные пробелы</div><div class="trialPoint"><b>3.</b> После урока я объясню родителю, что делать дальше</div></div>
-    </div></div></div>
+  <section class="screen dark" data-theme="dark" id="trial">
+    <div class="shell">
+      <div class="trialCard">
+        <div class="trialGrid">
+          <div class="trialCopy">
+            <h2 class="screenTitle">Начнём с бесплатного пробного урока</h2>
+            <p>За 40 минут посмотрим реальный уровень, найдём основные пробелы и поймём, какой путь до 4–5 выглядит реалистично.</p>
+            <div class="trialAction"><a class="btn primary" href="#">Записаться на пробный урок</a></div>
+            <p class="finalNote">После занятия расскажу родителю, что увидел и как бы я выстроил дальнейшую подготовку.</p>
+          </div>
+          <div class="trialPoints">
+            <div class="trialPoint"><b>01</b> Знакомимся и обсуждаем цель</div>
+            <div class="trialPoint"><b>02</b> Решаем несколько задач ОГЭ</div>
+            <div class="trialPoint"><b>03</b> Разбираем ошибки</div>
+            <div class="trialPoint"><b>04</b> Формулируем следующий шаг</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="miniFooter">Фёдор • подготовка к ОГЭ по математике • 2026</div>
   </section>
-
-  <footer><div class="shell footer"><span>Фёдор • подготовка к ОГЭ по математике</span><span>© 2026</span></div></footer>
 
   <script>
-    function initCarousel(id){const root=document.getElementById(id);if(!root)return;const track=root.querySelector('.carouselTrack');const slides=[...root.querySelectorAll('.slide')];let i=0;const render=()=>track.style.transform=`translateX(-${i*100}%)`;root.querySelector('.prev').onclick=()=>{i=(i-1+slides.length)%slides.length;render()};root.querySelector('.next').onclick=()=>{i=(i+1)%slides.length;render()};let x=null;const v=root.querySelector('.carouselViewport');v.onpointerdown=e=>x=e.clientX;v.onpointerup=e=>{if(x===null)return;const dx=e.clientX-x;if(Math.abs(dx)>45){i=dx<0?(i+1)%slides.length:(i-1+slides.length)%slides.length;render()}x=null};render()}
-    initCarousel('casesCarousel');initCarousel('reviewsCarousel');
+    const screens=[...document.querySelectorAll('.screen')];
+    const pager=document.querySelector('.pager');
+    const pagerButtons=screens.map((screen,i)=>{
+      const b=document.createElement('button');
+      b.type='button';
+      b.setAttribute('aria-label','Экран '+(i+1));
+      b.addEventListener('click',()=>screen.scrollIntoView({behavior:'smooth'}));
+      pager.appendChild(b);
+      return b;
+    });
+    const observer=new IntersectionObserver(entries=>{
+      const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+      if(!visible)return;
+      const index=screens.indexOf(visible.target);
+      pagerButtons.forEach((b,i)=>b.classList.toggle('active',i===index));
+      pager.classList.toggle('lightMode',visible.target.dataset.theme==='light');
+    },{threshold:[.55,.7,.85]});
+    screens.forEach(s=>observer.observe(s));
+
+    function initCarousel(id){
+      const root=document.getElementById(id); if(!root)return;
+      const track=root.querySelector('.carouselTrack');
+      const slides=[...root.querySelectorAll('.slide')];
+      let index=0,startX=null,startY=null;
+      const render=()=>{track.style.transform=`translateX(-${index*100}%)`;};
+      root.querySelector('.prev').addEventListener('click',()=>{index=(index-1+slides.length)%slides.length;render();});
+      root.querySelector('.next').addEventListener('click',()=>{index=(index+1)%slides.length;render();});
+      const viewport=root.querySelector('.carouselViewport');
+      viewport.addEventListener('pointerdown',e=>{startX=e.clientX;startY=e.clientY;});
+      viewport.addEventListener('pointerup',e=>{
+        if(startX===null)return;
+        const dx=e.clientX-startX,dy=e.clientY-startY;
+        if(Math.abs(dx)>45 && Math.abs(dx)>Math.abs(dy)*1.25){index=dx<0?(index+1)%slides.length:(index-1+slides.length)%slides.length;render();}
+        startX=startY=null;
+      });
+      viewport.addEventListener('pointercancel',()=>{startX=startY=null;});
+      render();
+    }
+    initCarousel('casesCarousel');
+    initCarousel('reviewsCarousel');
   </script>
 </body>
 </html>
