@@ -7,230 +7,294 @@
   <meta name="description" content="Подготовка к ОГЭ по математике для 9 класса: цель 4–5, понятный план, контроль прогресса и бесплатный пробный урок." />
   <style>
     :root{
-      --bg:#061225;
-      --bg2:#0a1d3d;
-      --blue:#4d8dff;
-      --blue2:#77b5ff;
-      --blue3:#d7e9ff;
-      --ink:#07152b;
-      --white:#f7fbff;
-      --muted:rgba(230,241,255,.68);
-      --glass:rgba(255,255,255,.095);
-      --glass2:rgba(255,255,255,.13);
-      --line:rgba(255,255,255,.16);
-      --shadow:0 28px 90px rgba(0,15,45,.35);
+      --navy:#061328;
+      --navy2:#0a2145;
+      --navy3:#103469;
+      --blue:#5d9fff;
+      --blue2:#8ec7ff;
+      --ice:#eaf5ff;
+      --white:#f8fbff;
+      --ink:#08162d;
+      --text:#273b59;
+      --muted:#6b7e97;
+      --glass:rgba(255,255,255,.11);
+      --glass-strong:rgba(255,255,255,.17);
+      --line:rgba(255,255,255,.18);
+      --shadow:0 30px 100px rgba(1,19,52,.30);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#07152b;color:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--navy);color:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
     a{text-decoration:none;color:inherit}
+    button{font:inherit}
     h1,h2,h3,p{margin-top:0}
     .shell{width:min(1180px,calc(100% - 40px));margin:0 auto}
-    .blue-bg{position:relative;isolation:isolate;background:
-      radial-gradient(circle at 18% 14%,rgba(87,155,255,.34),transparent 28%),
-      radial-gradient(circle at 82% 22%,rgba(34,109,255,.25),transparent 33%),
-      radial-gradient(circle at 70% 78%,rgba(90,178,255,.17),transparent 31%),
-      linear-gradient(145deg,#07142b 0%,#0b234c 48%,#071a38 100%)}
-    .blue-bg:before,.blue-bg:after{content:"";position:absolute;z-index:-1;border-radius:999px;filter:blur(18px);opacity:.65;pointer-events:none}
-    .blue-bg:before{width:320px;height:320px;left:-120px;top:360px;background:rgba(87,155,255,.18)}
-    .blue-bg:after{width:360px;height:360px;right:-150px;top:120px;background:rgba(115,184,255,.16)}
-    .glass{background:linear-gradient(135deg,rgba(255,255,255,.15),rgba(255,255,255,.055));border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),var(--shadow);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%)}
-    .nav{height:92px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:5}
-    .brand{font-size:24px;font-weight:850;letter-spacing:-.05em}
-    .navCta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:18px;font-weight:800;transition:.2s transform ease,.2s background ease,.2s border-color ease}
+    .section{padding:112px 0;position:relative;overflow:hidden}
+    .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:850;color:#9dcbff;margin-bottom:18px}
+    .sectionHead{max-width:810px;margin-bottom:52px}
+    .sectionHead h2{font-size:clamp(42px,4.8vw,68px);line-height:.99;letter-spacing:-.055em;margin-bottom:18px}
+    .sectionHead p{font-size:18px;line-height:1.65;color:rgba(230,242,255,.67);max-width:760px}
+    .darkHead .eyebrow{color:#3477d6}.darkHead h2{color:var(--ink)}.darkHead p{color:#61748f}
+
+    .liquid{position:relative;background:linear-gradient(135deg,rgba(255,255,255,.17),rgba(255,255,255,.055));border:1px solid rgba(255,255,255,.19);box-shadow:inset 0 1px 0 rgba(255,255,255,.24),var(--shadow);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);overflow:hidden}
+    .liquid:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.16),transparent 26%,transparent 70%,rgba(126,190,255,.08));pointer-events:none}
+    .blueScene{background:radial-gradient(circle at 14% 16%,rgba(82,156,255,.32),transparent 28%),radial-gradient(circle at 84% 18%,rgba(60,126,255,.27),transparent 30%),radial-gradient(circle at 75% 84%,rgba(115,196,255,.16),transparent 30%),linear-gradient(145deg,#061328 0%,#0a234b 50%,#071a37 100%)}
+
+    .nav{height:90px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:5}
+    .brand{font-size:24px;font-weight:900;letter-spacing:-.05em}
+    .navCta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:18px;font-weight:850;transition:.2s transform ease,.2s box-shadow ease}
     .navCta:hover,.btn:hover{transform:translateY(-2px)}
-    .navCta{padding:12px 18px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.07);backdrop-filter:blur(18px);font-size:14px}
-    .hero{min-height:820px;padding-bottom:90px;overflow:hidden;border-radius:0 0 52px 52px;position:relative}
-    .heroGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center;padding:74px 0 60px}
-    .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:850;color:#9ecbff;margin-bottom:18px}
-    h1{font-size:clamp(54px,6.4vw,88px);line-height:.95;letter-spacing:-.065em;margin-bottom:26px;max-width:820px}
-    h1 span{background:linear-gradient(90deg,#87c3ff,#d8efff);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .lead{font-size:20px;line-height:1.6;color:var(--muted);max-width:690px}
+    .navCta{padding:12px 18px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.075);backdrop-filter:blur(16px);font-size:14px}
+    .btn{min-height:54px;padding:0 22px;font-size:15px;border:0;cursor:pointer}
+    .btnPrimary{background:linear-gradient(135deg,#6cabff,#91caff);color:#07172f;box-shadow:0 16px 38px rgba(77,147,255,.28)}
+    .btnGlass{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.07);color:white;backdrop-filter:blur(18px)}
+
+    .hero{min-height:820px;border-radius:0 0 54px 54px;padding-bottom:80px;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(104,179,255,.13);filter:blur(30px);right:-140px;top:170px}
+    .heroGrid{display:grid;grid-template-columns:1.07fr .93fr;gap:64px;align-items:center;padding:76px 0 56px}
+    h1{font-size:clamp(56px,6.5vw,90px);line-height:.94;letter-spacing:-.068em;margin-bottom:28px;max-width:840px}
+    h1 span{background:linear-gradient(90deg,#83c0ff,#d9efff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:20px;line-height:1.62;color:rgba(232,243,255,.71);max-width:700px}
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin:34px 0 18px}
-    .btn{min-height:54px;padding:0 22px;font-size:15px}
-    .btnPrimary{background:linear-gradient(135deg,#5d9fff,#7dbaff);color:#07172f;box-shadow:0 14px 34px rgba(75,145,255,.28)}
-    .btnGlass{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.065);color:#fff;backdrop-filter:blur(16px)}
-    .heroNote{font-size:13px;color:rgba(228,240,255,.55);line-height:1.5;max-width:650px}
+    .heroNote{font-size:13px;line-height:1.5;color:rgba(228,241,255,.55);max-width:650px}
     .proofRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-    .proof{padding:10px 13px;border-radius:999px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.13);font-size:13px;font-weight:750;color:rgba(255,255,255,.84);backdrop-filter:blur(14px)}
+    .proof{padding:10px 13px;border-radius:999px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.13);font-size:13px;font-weight:780;color:rgba(255,255,255,.85);backdrop-filter:blur(14px)}
     .heroVisual{position:relative;min-height:540px;display:flex;align-items:center;justify-content:center}
-    .mainGlass{width:min(430px,100%);padding:20px;border-radius:34px;position:relative;overflow:hidden}
-    .mainGlass:before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(109,181,255,.18);right:-80px;top:-70px;filter:blur(10px)}
-    .photo{height:390px;border-radius:26px;background:linear-gradient(145deg,#b9d7ff 0%,#6e9fd3 48%,#284d7b 100%);position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.16)}
-    .photo:before{content:"";position:absolute;width:175px;height:175px;border-radius:50%;background:rgba(255,255,255,.24);top:58px;left:50%;transform:translateX(-50%)}
-    .photo:after{content:"";position:absolute;width:255px;height:285px;border-radius:130px 130px 26px 26px;background:rgba(5,23,52,.76);bottom:-84px;left:50%;transform:translateX(-50%)}
-    .visualFoot{display:flex;justify-content:space-between;align-items:end;gap:16px;padding:18px 6px 2px;position:relative;z-index:1}
-    .visualFoot strong{font-size:23px;letter-spacing:-.035em}
-    .visualFoot span{font-size:12px;line-height:1.4;text-align:right;color:rgba(255,255,255,.56)}
-    .floatCard{position:absolute;padding:16px 18px;border-radius:20px;font-size:13px;line-height:1.45;max-width:210px}
-    .floatCard b{display:block;font-size:23px;margin-bottom:4px;letter-spacing:-.03em}
-    .f1{left:-24px;top:72px}.f2{right:-18px;bottom:74px}
-    .section{padding:112px 0}
-    .sectionHead{max-width:790px;margin-bottom:54px}
-    .sectionHead h2{font-size:clamp(40px,4.7vw,66px);line-height:1;letter-spacing:-.052em;margin-bottom:18px}
-    .sectionHead p{font-size:18px;line-height:1.62;color:rgba(226,239,255,.65);max-width:720px}
-    .proofSection{background:#eef6ff;color:var(--ink);position:relative;overflow:hidden}
-    .proofSection:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 10%,rgba(79,143,255,.12),transparent 28%),linear-gradient(180deg,#edf6ff,#f7fbff)}
-    .proofSection .shell{position:relative}
-    .darkText .eyebrow{color:#2a68c9}.darkText h2{color:#07152b}.darkText p{color:#5f6f86}
-    .caseGrid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}
-    .caseMain,.caseSmall{border-radius:30px;position:relative;overflow:hidden}
-    .caseMain{padding:34px;min-height:430px;background:linear-gradient(145deg,#0d2856,#0b1c3c);color:#fff;box-shadow:0 25px 70px rgba(26,79,148,.17)}
-    .caseMain:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;right:-90px;top:-90px;background:rgba(86,159,255,.22);filter:blur(8px)}
-    .caseLabel{font-size:11px;text-transform:uppercase;letter-spacing:.13em;font-weight:850;color:#a9d2ff}
-    .score{display:flex;align-items:center;gap:22px;margin:78px 0 18px;position:relative;z-index:1}
-    .score span{font-size:90px;font-weight:900;letter-spacing:-.065em}.score i{font-style:normal;font-size:44px;color:#81bdff}
-    .caseMain h3{font-size:30px;letter-spacing:-.04em;max-width:520px;position:relative;z-index:1}
-    .caseMain p{color:rgba(234,244,255,.6);line-height:1.6;max-width:610px}
-    .sideCases{display:grid;gap:18px}
-    .caseSmall{padding:28px;background:rgba(255,255,255,.68);border:1px solid rgba(38,93,160,.13);box-shadow:0 20px 60px rgba(31,77,128,.08);backdrop-filter:blur(18px)}
-    .caseSmall h3{font-size:26px;letter-spacing:-.035em;margin:42px 0 10px}.caseSmall p{color:#66758a;line-height:1.58;margin-bottom:0}
-    .painSection{background:linear-gradient(180deg,#07152b 0%,#0b2146 100%)}
-    .painGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .pain{padding:28px;border-radius:28px;min-height:310px;display:flex;flex-direction:column}
-    .num{font-size:11px;letter-spacing:.12em;color:#9ecbff;font-weight:850;margin-bottom:auto}
-    .pain h3{font-size:25px;line-height:1.16;letter-spacing:-.035em;margin:52px 0 12px}.pain p{color:rgba(228,240,255,.62);line-height:1.6;margin-bottom:0}
-    .systemSection{background:linear-gradient(180deg,#0b2146,#0d2856);position:relative;overflow:hidden}
-    .systemGrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
-    .systemBig{padding:34px;border-radius:34px;min-height:520px}
-    .systemBig h3{font-size:34px;letter-spacing:-.045em;max-width:520px}
-    .systemBig>p{color:rgba(231,241,255,.62);line-height:1.62;max-width:620px}
-    .steps{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
-    .step{padding:18px;border-radius:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11)}
-    .step b{display:block;color:#a9d2ff;font-size:11px;letter-spacing:.12em;margin-bottom:18px}.step strong{display:block;font-size:18px;margin-bottom:7px}.step span{font-size:13px;line-height:1.45;color:rgba(230,242,255,.58)}
-    .parentCard{padding:34px;border-radius:34px;background:linear-gradient(155deg,rgba(125,190,255,.18),rgba(255,255,255,.07));border:1px solid rgba(169,215,255,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 28px 80px rgba(0,20,60,.25);backdrop-filter:blur(20px)}
-    .parentCard h3{font-size:35px;letter-spacing:-.045em;margin-bottom:16px}.parentCard>p{color:rgba(232,243,255,.68);line-height:1.6}
-    .checklist{display:grid;gap:12px;margin-top:28px}.check{display:flex;gap:13px;align-items:flex-start;padding:16px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}
-    .dot{width:26px;height:26px;border-radius:50%;background:rgba(111,182,255,.18);border:1px solid rgba(159,211,255,.3);display:grid;place-items:center;flex:0 0 26px;color:#b8ddff;font-weight:900}
-    .check strong{display:block;font-size:15px;margin-bottom:3px}.check span{font-size:13px;color:rgba(230,241,255,.56);line-height:1.45}
-    .aboutSection{background:#eef6ff;color:var(--ink)}
-    .aboutGrid{display:grid;grid-template-columns:.78fr 1.22fr;gap:52px;align-items:stretch}
-    .aboutVisual{min-height:610px;border-radius:34px;background:linear-gradient(145deg,#0a2046,#0d315f);padding:20px;position:relative;overflow:hidden;box-shadow:0 28px 90px rgba(24,72,132,.2)}
-    .aboutVisual:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(102,180,255,.18);right:-100px;top:-90px;filter:blur(12px)}
-    .aboutVisual .photo{height:455px}.aboutFoot{display:flex;justify-content:space-between;align-items:end;padding:20px 8px 0;color:#fff;position:relative;z-index:2}.aboutFoot strong{font-size:27px}.aboutFoot span{font-size:12px;color:rgba(255,255,255,.6);text-align:right;line-height:1.4}
-    .aboutStory{padding:12px 0}.aboutStory .eyebrow{color:#2b6bd0}.aboutStory h2{font-size:clamp(40px,4.7vw,66px);line-height:1;letter-spacing:-.052em;margin-bottom:28px}.aboutStory .storyLead{font-size:22px;line-height:1.55;color:#243a59}.aboutStory p{font-size:17px;line-height:1.75;color:#5f6f84;max-width:690px}
-    .storyQuote{margin:30px 0;padding:26px 28px;border-radius:24px;background:linear-gradient(135deg,rgba(89,154,255,.13),rgba(255,255,255,.7));border:1px solid rgba(63,124,205,.13);font-size:20px;line-height:1.55;color:#183252}
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px}.stat{padding:18px;border-radius:20px;background:#fff;border:1px solid rgba(39,94,163,.1);box-shadow:0 12px 30px rgba(23,67,121,.06)}.stat strong{display:block;font-size:24px;letter-spacing:-.04em;margin-bottom:4px}.stat span{font-size:12px;line-height:1.35;color:#6c7b8f}
-    .trialSection{background:linear-gradient(180deg,#0d2856,#07152b);position:relative;overflow:hidden}.trialCard{display:grid;grid-template-columns:1.08fr .92fr;gap:28px;padding:42px;border-radius:38px;background:linear-gradient(135deg,rgba(255,255,255,.15),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(24px);box-shadow:0 34px 100px rgba(0,18,55,.32)}
-    .trialCard h2{font-size:clamp(40px,4.9vw,68px);line-height:.98;letter-spacing:-.055em;margin-bottom:18px}.trialCard p{font-size:18px;line-height:1.62;color:rgba(230,241,255,.66)}
-    .trialBullets{display:grid;gap:12px}.trialBullet{padding:18px;border-radius:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}.trialBullet strong{display:block;margin-bottom:5px}.trialBullet span{font-size:13px;line-height:1.45;color:rgba(228,240,255,.56)}
-    .trialActions{margin-top:28px}.trialMicro{font-size:12px!important;color:rgba(229,241,255,.48)!important;margin-top:12px!important}
+    .portraitCard{width:min(430px,100%);padding:18px;border-radius:34px;transform:rotate(1.5deg)}
+    .photo{height:400px;border-radius:27px;background:linear-gradient(145deg,#badbff 0%,#6ea1d8 48%,#294f80 100%);position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.18)}
+    .photo:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.25);top:58px;left:50%;transform:translateX(-50%)}
+    .photo:after{content:"";position:absolute;width:260px;height:290px;border-radius:140px 140px 28px 28px;background:rgba(5,23,52,.77);bottom:-86px;left:50%;transform:translateX(-50%)}
+    .portraitFoot{display:flex;justify-content:space-between;align-items:end;padding:18px 6px 2px;position:relative;z-index:2}.portraitFoot strong{font-size:24px}.portraitFoot span{font-size:12px;line-height:1.4;color:rgba(255,255,255,.58);text-align:right}
+    .float{position:absolute;padding:15px 18px;border-radius:20px;font-size:13px;line-height:1.45;max-width:205px}.float b{display:block;font-size:23px;margin-bottom:4px}.float.one{left:-22px;top:78px}.float.two{right:-12px;bottom:72px}
+
+    /* Story / about early */
+    .storySection{background:linear-gradient(180deg,#edf7ff 0%,#f7fbff 100%);color:var(--ink)}
+    .storySection:before{content:"";position:absolute;width:470px;height:470px;border-radius:50%;background:rgba(86,151,255,.12);left:-210px;top:-170px;filter:blur(20px)}
+    .storyGrid{display:grid;grid-template-columns:.78fr 1.22fr;gap:54px;align-items:stretch;position:relative}
+    .storyVisual{min-height:620px;border-radius:36px;background:linear-gradient(150deg,#08204a,#0d3b78);padding:18px;box-shadow:0 30px 90px rgba(24,74,135,.2);position:relative;overflow:hidden}
+    .storyVisual:after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;right:-110px;top:-90px;background:rgba(119,190,255,.17);filter:blur(12px)}
+    .storyVisual .photo{height:465px}.storyVisualFoot{display:flex;justify-content:space-between;align-items:end;padding:20px 8px 0;position:relative;z-index:2}.storyVisualFoot strong{font-size:28px;color:#fff}.storyVisualFoot span{font-size:12px;color:rgba(255,255,255,.6);text-align:right;line-height:1.4}
+    .storyCopy{padding:12px 0}.storyCopy .eyebrow{color:#3477d6}.storyCopy h2{font-size:clamp(43px,4.8vw,68px);line-height:.99;letter-spacing:-.055em;margin-bottom:28px}.storyLead{font-size:22px;line-height:1.58;color:#253a58;margin-bottom:26px}.storyCopy p{font-size:17px;line-height:1.78;color:#5f7087;max-width:700px}
+    .storyMoment{margin:30px 0;padding:27px 28px;border-radius:26px;background:linear-gradient(135deg,rgba(77,143,255,.14),rgba(255,255,255,.82));border:1px solid rgba(55,115,195,.12);font-size:20px;line-height:1.56;color:#183454}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px}.stat{padding:18px;border-radius:20px;background:white;border:1px solid rgba(38,92,160,.1);box-shadow:0 12px 30px rgba(23,67,121,.06)}.stat strong{display:block;font-size:24px;letter-spacing:-.04em;margin-bottom:4px}.stat span{font-size:12px;line-height:1.35;color:#6b7b91}
+
+    /* Carousels */
+    .evidenceSection{background:linear-gradient(180deg,#07152e,#0b234b)}
+    .evidenceGrid{display:grid;grid-template-columns:1.12fr .88fr;gap:22px;align-items:start}
+    .carousel{position:relative;min-width:0}
+    .carouselViewport{overflow:hidden;border-radius:34px}
+    .carouselTrack{display:flex;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+    .slide{min-width:100%;padding:2px}
+    .caseCard{min-height:480px;border-radius:32px;padding:34px;background:radial-gradient(circle at 85% 12%,rgba(113,190,255,.22),transparent 28%),linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.055));border:1px solid rgba(255,255,255,.17);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 25px 80px rgba(0,17,52,.26);backdrop-filter:blur(22px)}
+    .caseLabel{font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:850;color:#9dccff}
+    .caseScore{display:flex;gap:22px;align-items:center;margin:76px 0 20px}.caseScore span{font-size:92px;font-weight:900;letter-spacing:-.07em}.caseScore i{font-style:normal;font-size:44px;color:#85c1ff}.caseCard h3{font-size:31px;letter-spacing:-.04em;max-width:570px;margin-bottom:12px}.caseCard p{color:rgba(230,242,255,.61);line-height:1.62;max-width:620px}
+    .reviewCard{min-height:480px;border-radius:32px;padding:28px;display:flex;flex-direction:column;background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.19),0 25px 80px rgba(0,17,52,.24);backdrop-filter:blur(22px)}
+    .reviewTop{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:24px}.reviewTop strong{font-size:18px}.reviewTop span{font-size:12px;color:rgba(232,243,255,.5)}
+    .reviewShot{flex:1;border-radius:24px;background:linear-gradient(145deg,rgba(224,240,255,.18),rgba(255,255,255,.07));border:1px dashed rgba(202,228,255,.3);display:grid;place-items:center;text-align:center;padding:28px;color:rgba(232,244,255,.52);line-height:1.6}.reviewShot b{display:block;color:#fff;font-size:20px;margin-bottom:7px}
+    .carouselControls{display:flex;align-items:center;justify-content:space-between;margin-top:16px;gap:14px}.arrows{display:flex;gap:8px}.arrow{width:46px;height:46px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);color:#fff;cursor:pointer;font-size:20px;backdrop-filter:blur(14px)}
+    .dots{display:flex;gap:7px}.dotNav{width:8px;height:8px;border-radius:999px;border:0;background:rgba(255,255,255,.24);padding:0;cursor:pointer;transition:.25s}.dotNav.active{width:27px;background:#84c2ff}
+    .carouselTitle{font-size:18px;font-weight:850;margin-bottom:13px;display:flex;align-items:center;justify-content:space-between}.carouselTitle span{font-size:12px;color:rgba(231,243,255,.46);font-weight:600}
+
+    /* Observations */
+    .observationsSection{background:linear-gradient(180deg,#edf7ff,#f8fbff);color:var(--ink)}
+    .observationIntro{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;align-items:end;margin-bottom:52px}.observationIntro h2{font-size:clamp(42px,4.8vw,68px);line-height:1;letter-spacing:-.055em;margin:0}.observationIntro p{font-size:19px;line-height:1.68;color:#5e718c;margin-bottom:2px}
+    .observations{display:grid;gap:14px}
+    .observation{display:grid;grid-template-columns:74px .92fr 1.08fr;gap:24px;align-items:center;padding:27px 30px;border-radius:28px;background:white;border:1px solid rgba(37,91,160,.1);box-shadow:0 16px 45px rgba(27,70,125,.07)}
+    .observationNum{width:54px;height:54px;border-radius:18px;background:#e4f1ff;color:#3477d6;display:grid;place-items:center;font-weight:900;font-size:14px}.observation h3{font-size:25px;letter-spacing:-.035em;margin:0}.observation p{margin:0;color:#687a91;line-height:1.6;font-size:15px}
+
+    /* Method / informative */
+    .methodSection{background:radial-gradient(circle at 12% 18%,rgba(85,155,255,.25),transparent 28%),radial-gradient(circle at 86% 76%,rgba(108,190,255,.12),transparent 28%),linear-gradient(155deg,#07162f,#0b2a58)}
+    .methodGrid{display:grid;grid-template-columns:.95fr 1.05fr;gap:28px;align-items:stretch}
+    .journey{padding:34px;border-radius:34px}.journey h3{font-size:34px;letter-spacing:-.045em;margin-bottom:10px}.journey>p{color:rgba(231,243,255,.62);line-height:1.62;margin-bottom:28px}
+    .timeline{display:grid;gap:0}.phase{display:grid;grid-template-columns:58px 1fr;gap:16px;position:relative;padding-bottom:22px}.phase:last-child{padding-bottom:0}.phaseRail{display:flex;flex-direction:column;align-items:center}.phaseDot{width:42px;height:42px;border-radius:16px;background:rgba(116,190,255,.16);border:1px solid rgba(151,211,255,.28);display:grid;place-items:center;font-weight:900;color:#bfe2ff;z-index:2}.phaseLine{width:1px;flex:1;background:linear-gradient(#7abaff,rgba(122,186,255,.1));margin-top:7px}.phaseContent{padding:7px 0 2px}.phaseContent strong{display:block;font-size:20px;margin-bottom:6px}.phaseContent p{font-size:14px;line-height:1.55;color:rgba(230,242,255,.57);margin:0}.phaseMeta{margin-top:9px;font-size:12px;color:#9ccaff}
+    .dashboard{padding:28px;border-radius:34px;background:linear-gradient(145deg,rgba(157,210,255,.16),rgba(255,255,255,.06));border:1px solid rgba(164,216,255,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 30px 90px rgba(0,19,60,.28);backdrop-filter:blur(22px)}
+    .dashTop{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:24px}.dashTop strong{font-size:22px}.status{padding:8px 11px;border-radius:999px;background:rgba(127,208,164,.13);border:1px solid rgba(148,224,182,.18);font-size:11px;color:#b8f0cf}
+    .scorePanel{padding:24px;border-radius:24px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);margin-bottom:14px}.scorePanelTop{display:flex;justify-content:space-between;align-items:end;gap:20px}.scorePanelTop span{font-size:13px;color:rgba(230,242,255,.55)}.scorePanelTop b{font-size:44px;letter-spacing:-.06em}.progressTrack{height:12px;border-radius:999px;background:rgba(255,255,255,.09);margin:18px 0 8px;overflow:hidden}.progressFill{width:67%;height:100%;background:linear-gradient(90deg,#6aabff,#a1d1ff);border-radius:inherit}.dashSmall{font-size:12px;color:rgba(229,242,255,.5)}
+    .dashGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.dashBox{padding:18px;border-radius:22px;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.1)}.dashBox span{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#92c4ff;margin-bottom:14px}.dashBox strong{font-size:18px}.dashBox p{font-size:12px;line-height:1.45;color:rgba(230,242,255,.52);margin:6px 0 0}
+    .parentStrip{margin-top:22px;padding:25px 28px;border-radius:28px;display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;align-items:center}.parentStrip h3{font-size:28px;letter-spacing:-.04em;margin:0}.parentStrip p{margin:0;color:rgba(230,242,255,.62);line-height:1.6}.parentStrip b{color:#b8ddff}
+
+    /* Trial climax */
+    .trialSection{background:linear-gradient(180deg,#eaf5ff 0%,#f9fcff 100%);color:var(--ink)}
+    .trialWrap{border-radius:42px;padding:46px;background:radial-gradient(circle at 82% 15%,rgba(121,195,255,.22),transparent 30%),linear-gradient(145deg,#0a2146,#0d356b);color:#fff;box-shadow:0 34px 100px rgba(22,72,135,.22);position:relative;overflow:hidden}
+    .trialWrap:after{content:"40";position:absolute;right:-24px;bottom:-96px;font-size:330px;font-weight:900;letter-spacing:-.1em;color:rgba(255,255,255,.035);pointer-events:none}
+    .trialTop{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:end;position:relative;z-index:2}.trialTop h2{font-size:clamp(44px,5vw,72px);line-height:.96;letter-spacing:-.06em;margin-bottom:18px}.trialTop p{font-size:18px;line-height:1.65;color:rgba(230,243,255,.66);max-width:650px}.forty{justify-self:end;width:210px;height:210px;border-radius:48px;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,.07));border:1px solid rgba(255,255,255,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 25px 70px rgba(0,20,60,.25);backdrop-filter:blur(24px);transform:rotate(3deg)}.forty strong{font-size:82px;line-height:.8;letter-spacing:-.08em}.forty span{font-size:13px;color:#b9ddff;margin-top:12px}
+    .trialFlow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:38px;position:relative;z-index:2}.trialStep{padding:22px;border-radius:23px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11)}.trialStep b{display:block;color:#9dceff;font-size:11px;letter-spacing:.12em;margin-bottom:20px}.trialStep strong{display:block;font-size:18px;margin-bottom:7px}.trialStep span{font-size:13px;line-height:1.5;color:rgba(231,243,255,.55)}
+    .trialBottom{display:flex;justify-content:space-between;gap:22px;align-items:center;margin-top:34px;position:relative;z-index:2}.trialBottom p{margin:0;max-width:600px;font-size:13px;line-height:1.55;color:rgba(229,242,255,.5)}
+
     footer{padding:30px 0;background:#04101f;color:rgba(230,241,255,.48)}.footer{display:flex;justify-content:space-between;gap:20px;font-size:12px}
-    @media(max-width:980px){.heroGrid,.caseGrid,.systemGrid,.aboutGrid,.trialCard{grid-template-columns:1fr}.heroVisual{min-height:500px}.painGrid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.aboutVisual{min-height:auto}.f1{left:10px}.f2{right:10px}}
-    @media(max-width:640px){.shell{width:min(100% - 24px,1180px)}.nav{height:76px}.navCta{display:none}.hero{border-radius:0 0 30px 30px;min-height:auto}.heroGrid{padding:46px 0 64px;gap:36px}h1{font-size:50px}.lead{font-size:17px}.heroVisual{min-height:420px}.mainGlass{width:100%;padding:14px}.photo{height:320px}.floatCard{display:none}.section{padding:78px 0}.sectionHead{margin-bottom:34px}.sectionHead h2,.aboutStory h2,.trialCard h2{font-size:40px}.painGrid{grid-template-columns:1fr}.pain{min-height:250px}.steps{grid-template-columns:1fr}.systemBig,.parentCard{padding:24px}.aboutVisual{padding:14px}.aboutVisual .photo{height:350px}.stats{grid-template-columns:1fr 1fr}.trialCard{padding:26px 20px}.score{margin-top:54px}.score span{font-size:68px}.footer{flex-direction:column}}
+
+    @media(max-width:1000px){.heroGrid,.storyGrid,.evidenceGrid,.methodGrid,.trialTop{grid-template-columns:1fr}.heroVisual{min-height:500px}.storyVisual{min-height:auto}.storyVisual .photo{height:420px}.observationIntro{grid-template-columns:1fr;gap:18px}.observation{grid-template-columns:60px 1fr}.observation p{grid-column:2}.parentStrip{grid-template-columns:1fr}.trialFlow{grid-template-columns:1fr 1fr}.forty{justify-self:start}.stats{grid-template-columns:1fr 1fr}}
+    @media(max-width:650px){.shell{width:min(100% - 24px,1180px)}.nav{height:76px}.navCta{display:none}.hero{min-height:auto;border-radius:0 0 30px 30px}.heroGrid{padding:46px 0 60px;gap:34px}h1{font-size:50px}.lead{font-size:17px}.heroVisual{min-height:410px}.portraitCard{padding:13px}.photo{height:320px}.float{display:none}.section{padding:78px 0}.sectionHead{margin-bottom:34px}.sectionHead h2,.storyCopy h2,.observationIntro h2,.trialTop h2{font-size:40px}.storyVisual{padding:13px;border-radius:26px}.storyVisual .photo{height:340px}.storyLead{font-size:19px}.stats{grid-template-columns:1fr 1fr}.caseCard,.reviewCard{min-height:440px;padding:24px}.caseScore{margin:60px 0 18px}.caseScore span{font-size:70px}.observation{grid-template-columns:52px 1fr;padding:22px 20px;gap:14px}.observation p{grid-column:1/-1}.journey,.dashboard{padding:23px}.dashGrid{grid-template-columns:1fr}.trialWrap{padding:28px 20px;border-radius:30px}.forty{width:160px;height:160px;border-radius:38px}.forty strong{font-size:64px}.trialFlow{grid-template-columns:1fr}.trialBottom{align-items:flex-start;flex-direction:column}.footer{flex-direction:column}}
   </style>
 </head>
 <body>
-  <section class="hero blue-bg">
+
+  <section class="hero blueScene">
     <div class="shell">
       <div class="nav"><div class="brand">Фёдор</div><a class="navCta" href="#trial">Бесплатный пробный урок</a></div>
       <div class="heroGrid">
         <div>
           <div class="eyebrow">ОГЭ по математике • 9 класс</div>
-          <h1>Помогаю выйти на <span>4–5</span> — без постоянной тревоги из-за ОГЭ</h1>
-          <p class="lead">Я беру подготовку под контроль: определяю пробелы, строю понятный план, слежу за домашней работой и пробниками. Родителю не нужно каждый вечер напоминать про математику и гадать, всё ли идёт нормально.</p>
-          <div class="actions"><a class="btn btnPrimary" href="#trial">Записаться на бесплатный пробный</a><a class="btn btnGlass" href="#results">Посмотреть результаты</a></div>
-          <div class="heroNote">На пробном уроке определим текущий уровень, найдём основные пробелы и поймём, что нужно сделать, чтобы выйти на 4–5.</div>
+          <h1>Помогаю выйти на <span>4–5</span> и перестать жить вокруг ОГЭ</h1>
+          <p class="lead">Я беру подготовку под контроль: вижу пробелы, строю план, слежу за домашней работой и пробниками. Ребёнок понимает, что делать дальше, а родителю не приходится каждый вечер напоминать про математику.</p>
+          <div class="actions"><a class="btn btnPrimary" href="#trial">Записаться на бесплатный пробный</a><a class="btn btnGlass" href="#evidence">Посмотреть результаты</a></div>
+          <div class="heroNote">На пробном уроке определим текущий уровень, найдём основные пробелы и поймём, какой путь до 4–5 реалистичен.</div>
           <div class="proofRow"><div class="proof">31/31 ОГЭ</div><div class="proof">92 ЕГЭ</div><div class="proof">НИУ ВШЭ</div><div class="proof">1,5+ года практики</div></div>
         </div>
         <div class="heroVisual">
-          <div class="mainGlass glass"><div class="photo"></div><div class="visualFoot"><strong>Фёдор</strong><span>репетитор по математике<br>9 класс • ОГЭ</span></div></div>
-          <div class="floatCard glass f1"><b>4–5</b>цель подготовки</div>
-          <div class="floatCard glass f2"><b>до экзамена</b>понятно, где мы сейчас и что дальше</div>
+          <div class="portraitCard liquid"><div class="photo"></div><div class="portraitFoot"><strong>Фёдор</strong><span>репетитор по математике<br>9 класс • ОГЭ</span></div></div>
+          <div class="float liquid one"><b>4–5</b>не мечта, а понятная цель</div>
+          <div class="float liquid two"><b>без хаоса</b>всегда видно, где мы и что дальше</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section proofSection" id="results">
+  <section class="section storySection" id="about">
     <div class="shell">
-      <div class="sectionHead darkText"><div class="eyebrow">Результаты учеников</div><h2>Сначала — доказательства, а не обещания</h2><p>Мне важнее показать, что происходит с реальными учениками, чем долго рассказывать, какой у меня «уникальный подход».</p></div>
-      <div class="caseGrid">
-        <article class="caseMain"><div class="caseLabel">Аделина • 9 класс</div><div class="score"><span>2</span><i>→</i><span>4</span></div><h3>С первого пробника до итоговой оценки на ОГЭ</h3><p>Стартовали с результата ниже проходного. За учебный год закрыли базовые пробелы, системно писали пробники и вышли на стабильную четвёрку.</p></article>
-        <div class="sideCases">
-          <article class="caseSmall"><div class="caseLabel" style="color:#2b6bd0">Ещё один кейс</div><h3>6 → 16 баллов</h3><p>Покажем здесь короткий путь ученика: стартовая точка, ключевая проблема и итог.</p></article>
-          <article class="caseSmall"><div class="caseLabel" style="color:#2b6bd0">Отзывы</div><h3>Сюда добавим реальные сообщения родителей и учеников</h3><p>Без вылизанных рекламных формулировок — обычные скрины после занятий и результатов.</p></article>
+      <div class="storyGrid">
+        <div class="storyVisual"><div class="photo"></div><div class="storyVisualFoot"><strong>Фёдор</strong><span>математика • ОГЭ<br>Санкт-Петербург</span></div></div>
+        <div class="storyCopy">
+          <div class="eyebrow">Почему я вообще так веду подготовку</div>
+          <h2>Я сам недавно был по другую сторону экзамена</h2>
+          <p class="storyLead">Я сдал ОГЭ по математике на 31/31, позже набрал 92 балла на ЕГЭ, а сейчас учусь в НИУ ВШЭ. Но преподавание научило меня гораздо большему, чем собственные экзамены.</p>
+          <p>Когда я только начал заниматься с девятиклассниками, мне казалось, что главное — хорошо объяснять математику. Через несколько месяцев стало понятно: этого недостаточно.</p>
+          <p>Ученик может всё понять на уроке, а потом неделю ничего не делать. Может иметь школьную четвёрку и проваливать пробник. Может месяцами заниматься и всё равно не знать, на какую оценку реально идёт.</p>
+          <div class="storyMoment">В какой-то момент я понял: моя работа — не просто «проводить уроки». Я должен выстроить вокруг ученика систему, в которой видно пробелы, следующий шаг и реальный прогресс до экзамена.</div>
+          <p>С тех пор я всё сильнее специализируюсь именно на девятиклассниках. За прошлый учебный год со мной занимались 15 учеников, и весь мой подход вырос именно из этих наблюдений, ошибок и результатов.</p>
+          <div class="stats"><div class="stat"><strong>31/31</strong><span>мой ОГЭ по математике</span></div><div class="stat"><strong>92</strong><span>балла на ЕГЭ</span></div><div class="stat"><strong>1,5+ года</strong><span>преподаю</span></div><div class="stat"><strong>15</strong><span>учеников за прошлый год</span></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section painSection">
+  <section class="section evidenceSection" id="evidence">
     <div class="shell">
-      <div class="sectionHead"><div class="eyebrow">Знакомая ситуация?</div><h2>Чаще всего родителю нужен не «ещё один репетитор»</h2><p>Нужно, чтобы ребёнок подготовился на 4–5, а дома не приходилось превращать ОГЭ в ежедневный источник конфликтов.</p></div>
-      <div class="painGrid">
-        <article class="pain glass"><div class="num">01</div><h3>Приходится постоянно напоминать</h3><p>«Ты сделал домашку?», «Когда математика?», «Ты вообще готовишься?» — и всё это быстро утомляет обе стороны.</p></article>
-        <article class="pain glass"><div class="num">02</div><h3>Непонятно, на какую оценку ребёнок реально идёт</h3><p>Школьная тройка или четвёрка не отвечает на вопрос, сколько баллов будет на ОГЭ и где именно слабые места.</p></article>
-        <article class="pain glass"><div class="num">03</div><h3>Занятия идут, а уверенности всё равно нет</h3><p>Можно месяцами ходить к репетитору и не понимать, растёт ли результат. Поэтому прогресс должен быть измеримым.</p></article>
+      <div class="sectionHead"><div class="eyebrow">Что получилось у учеников</div><h2>Лучше покажу результаты и отзывы, чем буду долго себя хвалить</h2><p>Кейсы можно листать отдельно от отзывов. Позже сюда просто подставим реальные фотографии и скрины — сама механика уже готова.</p></div>
+      <div class="evidenceGrid">
+        <div class="carousel" id="casesCarousel">
+          <div class="carouselTitle">Кейсы <span>листайте →</span></div>
+          <div class="carouselViewport"><div class="carouselTrack">
+            <div class="slide"><article class="caseCard"><div class="caseLabel">Аделина • 9 класс</div><div class="caseScore"><span>2</span><i>→</i><span>4</span></div><h3>С первого пробника до итоговой четвёрки на ОГЭ</h3><p>Начинали с результата ниже проходного. За учебный год закрыли базовые пробелы, регулярно писали пробники и вышли на стабильный результат.</p></article></div>
+            <div class="slide"><article class="caseCard"><div class="caseLabel">Аля • 9 класс</div><div class="caseScore"><span>6</span><i>→</i><span>16</span></div><h3>Рост на 10 баллов за время подготовки</h3><p>Здесь позже добавим короткую историю: что именно не получалось в начале, какой был переломный момент и за счёт чего вырос итоговый результат.</p></article></div>
+            <div class="slide"><article class="caseCard"><div class="caseLabel">Следующий кейс</div><div class="caseScore"><span>?</span><i>→</i><span>?</span></div><h3>Добавим ещё один реальный результат</h3><p>Лучший формат — одна сильная цифра, короткая стартовая проблема и конкретный итог.</p></article></div>
+          </div></div>
+          <div class="carouselControls"><div class="arrows"><button class="arrow prev" aria-label="Предыдущий кейс">←</button><button class="arrow next" aria-label="Следующий кейс">→</button></div><div class="dots"></div></div>
+        </div>
+
+        <div class="carousel" id="reviewsCarousel">
+          <div class="carouselTitle">Отзывы <span>листайте →</span></div>
+          <div class="carouselViewport"><div class="carouselTrack">
+            <div class="slide"><article class="reviewCard"><div class="reviewTop"><strong>Отзыв родителя</strong><span>скрин сообщения</span></div><div class="reviewShot"><div><b>Сюда вставим реальный скрин</b>Лучше обычное сообщение из переписки, чем специально написанный «идеальный отзыв».</div></div></article></div>
+            <div class="slide"><article class="reviewCard"><div class="reviewTop"><strong>Отзыв ученика</strong><span>скрин сообщения</span></div><div class="reviewShot"><div><b>Ещё один реальный скрин</b>Например, реакция после пробника, оценки или самого экзамена.</div></div></article></div>
+            <div class="slide"><article class="reviewCard"><div class="reviewTop"><strong>Отзыв родителя</strong><span>скрин сообщения</span></div><div class="reviewShot"><div><b>И ещё один</b>Три-четыре сильных отзыва в карусели будут выглядеть гораздо живее отдельного блока текста.</div></div></article></div>
+          </div></div>
+          <div class="carouselControls"><div class="arrows"><button class="arrow prev" aria-label="Предыдущий отзыв">←</button><button class="arrow next" aria-label="Следующий отзыв">→</button></div><div class="dots"></div></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section systemSection" id="system">
+  <section class="section observationsSection">
     <div class="shell">
-      <div class="sectionHead"><div class="eyebrow">Как я веду подготовку</div><h2>Не просто уроки — управляемый путь до нужной оценки</h2><p>В каждый момент мы понимаем стартовую точку, ближайшую задачу и реальную динамику по баллам.</p></div>
-      <div class="systemGrid">
-        <div class="systemBig glass">
-          <h3>От диагностики до экзамена — одна понятная логика</h3>
-          <p>Я не начинаю с бесконечного решения вариантов. Сначала определяем, что именно мешает набрать нужный балл, а дальше строим подготовку вокруг цели.</p>
-          <div class="steps">
-            <div class="step"><b>01</b><strong>Диагностика</strong><span>Определяем текущий уровень и реальные пробелы.</span></div>
-            <div class="step"><b>02</b><strong>План до 4–5</strong><span>Фиксируем, какие темы дадут максимальный прирост.</span></div>
-            <div class="step"><b>03</b><strong>Практика и ДЗ</strong><span>Закрепляем материал, а не просто «проходим тему».</span></div>
-            <div class="step"><b>04</b><strong>Пробники</strong><span>Регулярно проверяем, растёт ли результат, и корректируем план.</span></div>
+      <div class="observationIntro">
+        <div><div class="eyebrow" style="color:#3477d6">Что я заметил за время работы</div><h2>Проблема редко только в математике</h2></div>
+        <p>Большинство сложностей повторяются из года в год. Именно поэтому я перестал строить подготовку как набор отдельных уроков.</p>
+      </div>
+      <div class="observations">
+        <article class="observation"><div class="observationNum">01</div><h3>«Он вроде всё понимает, но сам не садится»</h3><p>Поэтому одной хорошей подачи материала мало. Нужен ритм: что сделать после урока, когда проверить и что будет, если ученик начинает выпадать.</p></article>
+        <article class="observation"><div class="observationNum">02</div><h3>Школьная оценка часто создаёт ложное спокойствие</h3><p>Четвёрка в журнале не говорит, сколько баллов будет на ОГЭ. Я ориентируюсь на реальные задания экзамена и динамику пробников.</p></article>
+        <article class="observation"><div class="observationNum">03</div><h3>К весне родители не должны впервые узнавать о проблемах</h3><p>Если результат стоит на месте, это должно быть видно раньше. Поэтому я слежу за выполнением работы и меняю план, когда что-то не срабатывает.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section methodSection" id="system">
+    <div class="shell">
+      <div class="sectionHead"><div class="eyebrow">Во что из этого вырос мой подход</div><h2>У ученика есть маршрут. У меня — контрольные точки.</h2><p>Вот уже конкретно, что происходит после того, как ребёнок приходит ко мне на подготовку.</p></div>
+      <div class="methodGrid">
+        <div class="journey liquid">
+          <h3>Путь от первого урока до экзамена</h3>
+          <p>Не движемся по учебнику подряд. Каждый этап отвечает на конкретный вопрос.</p>
+          <div class="timeline">
+            <div class="phase"><div class="phaseRail"><div class="phaseDot">1</div><div class="phaseLine"></div></div><div class="phaseContent"><strong>Сначала — реальная точка А</strong><p>На пробном смотрю, какие типы задач получаются, где теряются баллы и насколько уверенно держится база.</p><div class="phaseMeta">результат: список главных пробелов</div></div></div>
+            <div class="phase"><div class="phaseRail"><div class="phaseDot">2</div><div class="phaseLine"></div></div><div class="phaseContent"><strong>Дальше — темы с максимальной отдачей</strong><p>Сначала закрываем то, что быстрее всего приближает к целевой оценке, а не просто «идём по программе».</p><div class="phaseMeta">результат: понятный ближайший план</div></div></div>
+            <div class="phase"><div class="phaseRail"><div class="phaseDot">3</div><div class="phaseLine"></div></div><div class="phaseContent"><strong>Между уроками — небольшая практика</strong><p>После занятия остаётся конкретная работа. Я вижу ошибки и понимаю, что нужно вернуть на следующий урок.</p><div class="phaseMeta">результат: материал не исчезает через два дня</div></div></div>
+            <div class="phase"><div class="phaseRail"><div class="phaseDot">4</div></div><div class="phaseContent"><strong>Регулярно — пробники и корректировка</strong><p>Если баллы не двигаются, меняем акцент. Если база уже стабильна — идём дальше.</p><div class="phaseMeta">результат: к весне нет сюрпризов</div></div></div>
           </div>
         </div>
-        <div class="parentCard">
-          <div class="eyebrow">Для родителя</div>
-          <h3>Вам не придётся контролировать подготовку самим</h3>
-          <p>Моя задача — не только объяснить математику, но и сделать так, чтобы вы не узнавали о проблемах за месяц до экзамена.</p>
-          <div class="checklist">
-            <div class="check"><div class="dot">✓</div><div><strong>Слежу за домашней работой</strong><span>Вижу, что сделано, где ошибки и где ученик начинает отставать.</span></div></div>
-            <div class="check"><div class="dot">✓</div><div><strong>Контролирую пробники</strong><span>Смотрим не на ощущения, а на конкретную динамику по баллам.</span></div></div>
-            <div class="check"><div class="dot">✓</div><div><strong>Реагирую, если что-то не работает</strong><span>Меняю акценты в плане, а не продолжаю двигаться по шаблону.</span></div></div>
-            <div class="check"><div class="dot">✓</div><div><strong>Даю понятный апдейт родителю</strong><span>Вы знаете, что происходит, но вам не нужно каждый день быть менеджером подготовки.</span></div></div>
+
+        <div class="dashboard">
+          <div class="dashTop"><strong>Что я вижу по ученику</strong><span class="status">всё под контролем</span></div>
+          <div class="scorePanel"><div class="scorePanelTop"><span>Пройдено по текущему плану</span><b>67%</b></div><div class="progressTrack"><div class="progressFill"></div></div><div class="dashSmall">Следующая контрольная точка — пробник</div></div>
+          <div class="dashGrid">
+            <div class="dashBox"><span>Сейчас</span><strong>14 баллов</strong><p>последний пробник</p></div>
+            <div class="dashBox"><span>Цель</span><strong>18+ баллов</strong><p>уверенная четвёрка</p></div>
+            <div class="dashBox"><span>Слабое место</span><strong>Геометрия</strong><p>2 темы в работе</p></div>
+            <div class="dashBox"><span>Домашняя работа</span><strong>6/7</strong><p>заданий выполнено</p></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section aboutSection" id="about">
-    <div class="shell">
-      <div class="aboutGrid">
-        <div class="aboutVisual"><div class="photo"></div><div class="aboutFoot"><strong>Фёдор</strong><span>математика • ОГЭ<br>Санкт-Петербург</span></div></div>
-        <div class="aboutStory">
-          <div class="eyebrow">Кто будет заниматься с вашим ребёнком</div>
-          <h2>Я пришёл к этой системе не сразу</h2>
-          <p class="storyLead">Меня зовут Фёдор. Я сам сдал ОГЭ по математике на 31/31, позже набрал 92 балла на ЕГЭ, а сейчас учусь в НИУ ВШЭ.</p>
-          <p>Когда я только начал преподавать, быстро понял: проблема девятиклассников редко только в том, что они «не знают математику». Намного чаще они готовятся рывками, не понимают, где именно теряют баллы, и до весны не знают, на какую оценку реально идут.</p>
-          <p>Поэтому за последние полтора года я постепенно перестроил занятия вокруг одной идеи: ученик всегда должен понимать следующий шаг, а родитель — не гадать, всё ли идёт нормально. За прошлый учебный год со мной занимались 15 учеников, и именно эта система стала основой моей подготовки.</p>
-          <div class="storyQuote">Хороший результат для меня — это не только «4» или «5» в день экзамена. Это момент, когда к весне у ученика есть понятный результат на пробниках, а дома ОГЭ перестаёт быть постоянным источником тревоги.</div>
-          <div class="stats"><div class="stat"><strong>31/31</strong><span>мой результат на ОГЭ</span></div><div class="stat"><strong>92</strong><span>балла на ЕГЭ</span></div><div class="stat"><strong>1,5+ года</strong><span>работаю с учениками</span></div><div class="stat"><strong>15</strong><span>учеников за прошлый год</span></div></div>
-        </div>
-      </div>
+      <div class="parentStrip liquid"><h3>А родителю не нужно становиться вторым преподавателем</h3><p>Я сам вижу, если ученик начинает выпадать, и даю родителю понятный апдейт по прогрессу. <b>Вы знаете, что происходит, но не управляете подготовкой каждый день.</b></p></div>
     </div>
   </section>
 
   <section class="section trialSection" id="trial">
     <div class="shell">
-      <div class="trialCard">
-        <div>
-          <div class="eyebrow">Бесплатный пробный урок</div>
-          <h2>Сначала разберёмся, что происходит сейчас</h2>
-          <p>На пробном уроке я не буду полчаса рассказывать о себе. Мы посмотрим математику ребёнка, определим текущий уровень и поймём, какой путь до 4–5 реалистичен.</p>
-          <div class="trialActions"><a class="btn btnPrimary" href="#">Записаться на пробный урок</a><p class="trialMicro">После занятия расскажу родителю, что увидел и как бы я выстроил дальнейшую подготовку.</p></div>
+      <div class="trialWrap">
+        <div class="trialTop">
+          <div><div class="eyebrow">Бесплатный пробный урок</div><h2>40 минут, после которых станет понятнее, что делать дальше</h2><p>Я не начинаю с продажи формата. Сначала смотрим самого ученика: как он решает, где ошибается и насколько далеко сейчас до нужной оценки.</p></div>
+          <div class="forty"><strong>40</strong><span>минут вместе</span></div>
         </div>
-        <div class="trialBullets">
-          <div class="trialBullet"><strong>Определим текущий уровень</strong><span>Не по школьной оценке, а по реальным заданиям ОГЭ.</span></div>
-          <div class="trialBullet"><strong>Найдём главные пробелы</strong><span>Поймём, что именно сейчас ограничивает результат.</span></div>
-          <div class="trialBullet"><strong>Оценим путь до 4–5</strong><span>Какие темы закрывать в первую очередь и сколько работы потребуется.</span></div>
-          <div class="trialBullet"><strong>Вы получите понятный вывод</strong><span>Даже до покупки занятий будет яснее, что делать дальше.</span></div>
+        <div class="trialFlow">
+          <div class="trialStep"><b>01</b><strong>Знакомимся</strong><span>Понимаю отношение к математике, цель и что уже тревожит.</span></div>
+          <div class="trialStep"><b>02</b><strong>Немного решаем</strong><span>Короткая диагностика на реальных задачах ОГЭ.</span></div>
+          <div class="trialStep"><b>03</b><strong>Разбираем ошибки</strong><span>Показываю, где именно сейчас теряются баллы.</span></div>
+          <div class="trialStep"><b>04</b><strong>Строим следующий шаг</strong><span>После урока родителю объясняю, как я бы выстроил подготовку.</span></div>
         </div>
+        <div class="trialBottom"><a class="btn btnPrimary" href="#">Записаться на пробный урок</a><p>Даже если после пробного вы решите заниматься с другим преподавателем, у вас останется более ясное понимание текущего уровня и того, куда двигаться дальше.</p></div>
       </div>
     </div>
   </section>
 
   <footer><div class="shell footer"><span>Фёдор • подготовка к ОГЭ по математике</span><span>© 2026</span></div></footer>
+
+  <script>
+    function initCarousel(id){
+      const root=document.getElementById(id);
+      if(!root) return;
+      const track=root.querySelector('.carouselTrack');
+      const slides=[...root.querySelectorAll('.slide')];
+      const prev=root.querySelector('.prev');
+      const next=root.querySelector('.next');
+      const dotsWrap=root.querySelector('.dots');
+      let index=0;
+      const dots=slides.map((_,i)=>{
+        const b=document.createElement('button');
+        b.className='dotNav';
+        b.setAttribute('aria-label','Перейти к слайду '+(i+1));
+        b.addEventListener('click',()=>{index=i;render();});
+        dotsWrap.appendChild(b);
+        return b;
+      });
+      function render(){
+        track.style.transform=`translateX(-${index*100}%)`;
+        dots.forEach((d,i)=>d.classList.toggle('active',i===index));
+      }
+      prev.addEventListener('click',()=>{index=(index-1+slides.length)%slides.length;render();});
+      next.addEventListener('click',()=>{index=(index+1)%slides.length;render();});
+      let startX=null;
+      root.querySelector('.carouselViewport').addEventListener('pointerdown',e=>{startX=e.clientX;});
+      root.querySelector('.carouselViewport').addEventListener('pointerup',e=>{
+        if(startX===null)return;
+        const dx=e.clientX-startX;
+        if(Math.abs(dx)>45){index=dx<0?(index+1)%slides.length:(index-1+slides.length)%slides.length;render();}
+        startX=null;
+      });
+      render();
+    }
+    initCarousel('casesCarousel');
+    initCarousel('reviewsCarousel');
+  </script>
 </body>
 </html>
